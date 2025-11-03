@@ -46,9 +46,29 @@
 
 
 // ask user if they're eighteen above then he's eligible other than he's not
-let age = +prompt("Enter your age"); 
-if(age>=18){
-    console.log("he's eligible");
+// let age = +prompt("Enter your age"); 
+// if(age>=18){
+//     console.log("he's eligible");
+// }else{
+//     console.log("he's not eligible");
+// }
+
+
+let age = prompt("Enter your age");
+if(age === null){
+    console.error("User cancelled the prompt.");
 }else{
-    console.log("he's not eligible");
+    if(age.trim()===""){
+        console.warn("No input provided.");
+    }else{
+        age=Number(age.trim());
+        if(isNaN(age)){
+            console.error("Invalid input. Please enter a numeric value.");
+        }else{
+            console.log("ye no. hai bhai");
+            
+        }
+    }
 }
+
+
