@@ -54,21 +54,75 @@
 // }
 
 
-let age = prompt("Enter your age");
-if(age === null){
-    console.error("User cancelled the prompt.");
-}else{
-    if(age.trim()===""){
-        console.warn("No input provided.");
-    }else{
-        age=Number(age.trim());
-        if(isNaN(age)){
-            console.error("Invalid input. Please enter a numeric value.");
-        }else{
-            console.log("ye no. hai bhai");
+
+
+// When we enter multiple spaces in prompt enter what will get and after that if you click OK and cancel then we can modify it using this codei
+// let age = prompt("Enter your age");
+// if(age === null){
+//     console.error("User cancelled the prompt.");
+// }else{
+//     if(age.trim()===""){
+//         console.warn("No input provided.");
+//     }else{
+//         age=Number(age.trim());
+//         if(isNaN(age)){
+//             console.error("Invalid input. Please enter a numeric value.");
+//         }else{
+//             console.log("ye no. hai bhai");
             
-        }
-    }
-}
+//         }
+//     }
+// }
+
+
+
+
+
+// ask user for a word until they type stop count how many typed yes use loop
+// let count = 0;
+// let word = prompt("Enter a word:");
+
+// while (word !== "stop") {
+//     count++;
+//     word = prompt("Enter another word (type 'stop' to end):");
+// }
+
+// console.log(`You entered ${count} words.`);
+
+
+
+
+
+
+
+// Print numbers divisible by 7 from 1 to 50 use % operator
+// for(let i=1;i<=50;i++){
+//     if(i%7===0){
+//         console.log(i)
+//     }
+// }
+
+
+
+
+
+
+
+// Print all odd numbers from 1 to 30 and their sum
+
+// let arr = [];
+// let sum = 0;
+
+// for (let i = 1; i <= 30; i++) {
+//     if (i % 2 !== 0) {
+//         console.log(i);      
+//         arr.push(i);         
+//         sum += i;            
+//     }
+// }
+
+// console.log("All odd numbers:", arr);
+// console.log("Sum of all odd numbers from 1 to 30:", sum);
+
 
 
