@@ -127,10 +127,34 @@
 
 
 // Odd number between 1 to 20 break when he reaches first three odd numbers 
-for (let i = 1; i <= 20; i++) {
-    if (i % 2 === 0) continue;  
+// for (let i = 1; i <= 20; i++) {
+//     if (i % 2 === 0) continue;  
 
-    if (i === 7) break;         
+//     if (i === 7) break;         
 
-    console.log(i);
+//     console.log(i);
+// }
+
+
+
+
+
+
+
+// When we enter multiple spaces in prompt enter what will get and after that if you click OK and cancel then we can modify it using this codei
+let age = prompt("Enter your age");
+if(age===null){
+    console.error("User cancelled the prompt.")
+}else{
+     if(age.trim()===""){
+        console.warn("No input provided.")
+     }else{
+        Number(age.trim());
+        if(isNaN(age)){
+            console.error("Invalid input. Please enter a numeric value.")
+        }else{
+            console.log(`your age is ${age}`);
+            
+        }
+     }
 }
