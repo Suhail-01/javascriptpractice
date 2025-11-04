@@ -142,19 +142,31 @@
 
 
 // When we enter multiple spaces in prompt enter what will get and after that if you click OK and cancel then we can modify it using this codei
-let age = prompt("Enter your age");
-if(age===null){
-    console.error("User cancelled the prompt.")
-}else{
-     if(age.trim()===""){
-        console.warn("No input provided.")
-     }else{
-        Number(age.trim());
-        if(isNaN(age)){
-            console.error("Invalid input. Please enter a numeric value.")
-        }else{
-            console.log(`your age is ${age}`);
+// let age = prompt("Enter your age");
+// if(age===null){
+//     console.error("User cancelled the prompt.")
+// }else{
+//      if(age.trim()===""){
+//         console.warn("No input provided.")
+//      }else{
+//         Number(age.trim());
+//         if(isNaN(age)){
+//             console.error("Invalid input. Please enter a numeric value.")
+//         }else{
+//             console.log(`your age is ${age}`);
             
-        }
-     }
-}
+//         }
+//      }
+// }
+
+
+
+
+
+
+// Print multiplication table of 38 with the propper desigin of actuall table ex... 38 X 1 = 38 lik this
+// for (let i = 1; i < 11; i++){
+//     console.log(`38 X ${i} = ${38*i}`);
+    
+// }
+
