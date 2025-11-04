@@ -170,3 +170,17 @@
     
 // }
 
+
+
+
+
+
+
+// count how many no.s are greater than 8  till 15 
+let count  = 0;
+for(let i =1; i<16;i++){
+    if(i>8){
+        count++;
+    }
+}
+console.log(`Total no.s greater than 8 till 15 is ${count}`);
