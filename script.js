@@ -267,15 +267,33 @@
 
 
 // ask user for a word until they type stop count how many typed yes use loop
-let word = prompt("Enter a word:");
-let count = 0;
+// let word = prompt("Enter a word:");
+// let count = 0;
 
-while (word !== "stop") {
-  if (word === "yes") {
-    count++;
-  }
-  console.log(`You entered 'yes' ${count} times`);
-  word = prompt("Enter a word:");
+// while (word !== "stop") {
+//   if (word === "yes") {
+//     count++;
+//   }
+//   console.log(`You entered 'yes' ${count} times`);
+//   word = prompt("Enter a word:");
+// }
+
+// console.log("Program ended");
+
+
+
+
+
+
+
+
+// pin number divisible by seven from one to fifty youth modulus% and loop 
+let sum = 0;
+for(let i=1;i<=50;i++){
+    if(i%7===0){
+        console.log(i)
+        sum = sum+i;
+    }
+       
 }
-
-console.log("Program ended");
+console.log(`here is 7th tables final sum:${sum}`);
