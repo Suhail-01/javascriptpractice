@@ -288,12 +288,55 @@
 
 
 // pin number divisible by seven from one to fifty youth modulus% and loop 
-let sum = 0;
-for(let i=1;i<=50;i++){
-    if(i%7===0){
-        console.log(i)
-        sum = sum+i;
-    }
+// let sum = 0;
+// for(let i=1;i<=50;i++){
+//     if(i%7===0){
+//         console.log(i)
+//         sum = sum+i;
+//     }
        
-}
-console.log(`here is 7th tables final sum:${sum}`);
+// }
+// console.log(`here is 7th tables final sum:${sum}`);
+
+
+
+
+
+
+
+
+// Some of all odds numbered from one to thirty and only odd numbers print final sums
+// let sum = 0;
+// for(let i =1;i<31;i++){
+//     if(i % 2 !==0){
+//         console.log(i);
+//         sum = sum + i;
+//     }
+// }
+// console.log(`the sum of all odds is ${sum}`);
+
+
+
+
+
+
+
+
+
+// Ask user until they type even number and stop when he enter
+// let ask = +prompt("Type any number:");
+
+// while (true) {
+//   if (ask % 2 === 0) {
+//     console.log("Even number entered. Program stopped.");
+//     break;
+//   }
+//   ask = +prompt("Type any number:");
+// }
+  
+
+    //  OR
+// let num = +prompt("enter a number");
+// while(num %2 !== 0){
+//     num = +prompt("enter a number")
+// }
