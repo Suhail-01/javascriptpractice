@@ -347,10 +347,48 @@
 
 
 // in numbers between two users input input start end end using prompt prompt all number 
-let one = +prompt("soyal chat");
-let two = +prompt("daam chat");
-if(one > two) console.error("the no not should be greater than one");
-for(let i = one; i<=two;i++){
-    console.log(i);
+// let one = +prompt("soyal chat");
+// let two = +prompt("daam chat");
+// if(one > two) console.error("the no not should be greater than one");
+// for(let i = one; i<=two;i++){
+//     console.log(i);
     
+// }
+
+
+
+
+
+// print first  3 odd no. between 1 to 20
+// let count = 0;
+// for(let i = 1; i < 21; i++){
+//     if(count === 3) break;
+//     if(i%2 !==0){
+//         console.log(i);
+//         count++;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// print any 5 no.s and check no. is + or- in log
+let count = 0 ;
+while(count < 5){
+    let no = +prompt("enter any 5 no.")
+    if(no > 0){
+        console.log("this is  +no. os go ahed");
+        
+    }else if(no<0){
+        console.log("this is -  no. stop!!");
+    }else{
+        console.log("no. is 0");
+    }
+    count++;
 }
+console.log("game ended now");
