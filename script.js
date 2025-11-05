@@ -340,3 +340,17 @@
 // while(num %2 !== 0){
 //     num = +prompt("enter a number")
 // }
+
+
+
+
+
+
+// in numbers between two users input input start end end using prompt prompt all number 
+let one = +prompt("soyal chat");
+let two = +prompt("daam chat");
+if(one > two) console.error("the no not should be greater than one");
+for(let i = one; i<=two;i++){
+    console.log(i);
+    
+}
