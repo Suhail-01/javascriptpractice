@@ -187,15 +187,71 @@
 
 
 
-// ask user for password access otherwise don't exist in console 
-let password = "112211";
-let pass = prompt("Enter your password:");
-if(pass === null){
-    console.error("User cancelled the prompt.");
-}else{
-    if(pass === password){
-        console.log("Access granted.");
-    }else{
-        console.log("Access denied.");
-}}
 
+
+
+
+
+
+
+
+// ask user for password access otherwise don't exist in console 
+// let password = "112211";
+// let pass = prompt("Enter your password:");
+// if(pass === null){
+//     console.error("User cancelled the prompt.");
+// }else{
+//     if(pass.trim() === password){
+//         console.log("Access granted.");
+//     }else{
+//         console.log("Access denied.");
+// }}
+
+
+
+
+
+
+
+//how for loop works
+//for(start;end;chnage)
+
+
+
+
+
+
+
+
+
+// Level 2 :-            Allow only 3 attempts to  enter correct password if users get it right early stop if not account locked
+
+// how while loop works
+// let i = 0; //start
+// while(i<=11){           //basically kab takchalega "end"
+//     console.log("no way");
+//     i++;                   //change
+// }
+
+
+
+
+
+let attempts = 0;
+let khulgaya = false;
+const password = "1234";
+
+while (attempts < 3 && !khulgaya) {
+  const pass = prompt("Enter your password:");
+  attempts++;
+  if (pass === password) {
+    khulgaya = true;
+    break;
+  }
+}
+
+if (khulgaya) {
+  console.log("Welcome! Account unlocked.");
+} else {
+  console.log("Account banned");
+}
