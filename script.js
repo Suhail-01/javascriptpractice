@@ -237,21 +237,45 @@
 
 
 
-let attempts = 0;
-let khulgaya = false;
-const password = "1234";
+// let attempts = 0;
+// let khulgaya = false;
+// const password = "1234";
 
-while (attempts < 3 && !khulgaya) {
-  const pass = prompt("Enter your password:");
-  attempts++;
-  if (pass === password) {
-    khulgaya = true;
-    break;
+// while (attempts < 3 && !khulgaya) {
+//   const pass = prompt("Enter your password:");
+//   attempts++;
+//   if (pass === password) {
+//     khulgaya = true;
+//     break;
+//   }
+// }
+
+// if (khulgaya) {
+//   console.log("Welcome! Account unlocked.");
+// } else {
+//   console.log("Account banned");
+// }
+
+
+
+
+
+
+
+
+
+
+
+// ask user for a word until they type stop count how many typed yes use loop
+let word = prompt("Enter a word:");
+let count = 0;
+
+while (word !== "stop") {
+  if (word === "yes") {
+    count++;
   }
+  console.log(`You entered 'yes' ${count} times`);
+  word = prompt("Enter a word:");
 }
 
-if (khulgaya) {
-  console.log("Welcome! Account unlocked.");
-} else {
-  console.log("Account banned");
-}
+console.log("Program ended");
