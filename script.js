@@ -287,7 +287,7 @@
 
 
 
-// pin number divisible by seven from one to fifty youth modulus% and loop 
+// print number divisible by seven from one to fifty youth modulus% and loop 
 // let sum = 0;
 // for(let i=1;i<=50;i++){
 //     if(i%7===0){
@@ -305,7 +305,7 @@
 
 
 
-// Some of all odds numbered from one to thirty and only odd numbers print final sums
+// Some of all odds numbered from one to 30 and only odd numbers print final sums
 // let sum = 0;
 // for(let i =1;i<31;i++){
 //     if(i % 2 !==0){
@@ -378,17 +378,64 @@
 
 
 // print any 5 no.s and check no. is + or- in log
-let count = 0 ;
-while(count < 5){
-    let no = +prompt("enter any 5 no.")
-    if(no > 0){
-        console.log("this is  +no. os go ahed");
+// let count = 0 ;
+// while(count < 5){
+//     let no = +prompt("enter any 5 no.")
+//     if(no > 0){
+//         console.log("this is  +no. os go ahed");
         
-    }else if(no<0){
-        console.log("this is -  no. stop!!");
+//     }else if(no<0){
+//         console.log("this is -  no. stop!!");
+//     }else{
+//         console.log("no. is 0");
+//     }
+//     count++;
+// }
+// console.log("game ended now");
+
+
+
+
+
+
+
+let ask = prompt("typ wishless no. u want");
+let count = 0;
+while(ask !=="stop"){
+    let num = +ask;
+    if(num === "stop") {
+        break;
+    }
+    ask = +prompt("typ wishless no. u want");
+    if(num  > 0){
+        console.log(`the ${ask} is +ve no`);
+        
+    }else if(num < 0){
+        console.log(`the ${ask} is -ve no`);
     }else{
-        console.log("no. is 0");
+        console.log(`you entered ${ask}`);
     }
     count++;
 }
-console.log("game ended now");
+console.log("stopp here");
+
+
+// let count = 0;
+// let ask = prompt("Type any number (or 'stop' to end):");
+
+// while (ask !== "stop") {
+//     // check for 'stop' BEFORE converting
+//     let num = +ask;
+//     if (num > 0) {
+//         console.log(`The number ${num} is positive.`);
+//     } else if (num < 0) {
+//         console.log(`The number ${num} is negative.`);
+//     } else {
+//         console.log(`You entered ${num}.`);
+//     }
+
+//     count++;
+//     ask = prompt("Type any number (or 'stop' to end):");
+// }
+
+// console.log("Stopped here.");
