@@ -399,32 +399,22 @@
 
 
 
-let ask = prompt("typ wishless no. u want");
-let count = 0;
-while(ask !=="stop"){
-    let num = +ask;
-    if(num === "stop") {
-        break;
-    }
-    ask = +prompt("typ wishless no. u want");
-    if(num  > 0){
-        console.log(`the ${ask} is +ve no`);
-        
-    }else if(num < 0){
-        console.log(`the ${ask} is -ve no`);
-    }else{
-        console.log(`you entered ${ask}`);
-    }
-    count++;
-}
-console.log("stopp here");
 
+
+// Ask user for numbers until they type “stop”.
+// Count how many are +, how many are -, how many are 0.
+// Then print the totals at the end.
 
 // let count = 0;
+// let ch = 'A'
 // let ask = prompt("Type any number (or 'stop' to end):");
 
 // while (ask !== "stop") {
 //     // check for 'stop' BEFORE converting
+//     if(ask >= 'A' && ask<='Z' ){
+//         break;
+
+//     }
 //     let num = +ask;
 //     if (num > 0) {
 //         console.log(`The number ${num} is positive.`);
