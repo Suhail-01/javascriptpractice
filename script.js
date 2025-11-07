@@ -498,12 +498,37 @@
 // If only divisible by 3, print "Fizz".
 // If only divisible by 5, print "Buzz".
 // Otherwise, print the number itself.
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// sk the user for two numbers — one for “Fizz” and one for “Buzz” — then print the pattern up to 100.
+let fizzNum = +prompt("Enter a number for Fizz:");
+let buzzNum = +prompt("Enter a number for Buzz:");
+
 for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
+    if (i % fizzNum === 0 && i % buzzNum === 0) {
         console.log("FizzBuzz");
-    } else if (i % 3 === 0) {
+    } else if (i % fizzNum === 0) {
         console.log("Fizz");
-    } else if (i % 5 === 0) {
+    } else if (i % buzzNum === 0) {
         console.log("Buzz");
     } else {
         console.log(i);
