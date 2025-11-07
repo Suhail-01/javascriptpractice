@@ -429,3 +429,53 @@
 // }
 
 // console.log("Stopped here.");
+
+
+
+
+
+// let count = 0;
+// for(let i =1;i<6;i++){
+//     let ask = +prompt("tell us any no.");
+//     if(ask>=0){
+//         console.log(`no is ${ask} +ve`);
+//         count++;
+//     }
+//     console.log(count);
+    
+// }
+
+
+
+// let n = prompt("Ask user for a number");
+// n = Number(n); 
+
+// if (n > 0) {
+//     console.log(`${n} is positive`);
+// } else if (n < 0) {
+//     console.log(`${n} is negative`);
+// } else if (n === 0) {
+//     console.log(`${n} is zero`);
+// } else {
+//     console.log(`${n} is an invalid number`);
+// }
+
+
+// let n = Number(prompt("Enter a number to print its multiplication table:"));
+
+// console.log(`Multiplication table for ${n}:`);
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${n} x ${i} = ${n * i}`);
+// }
+
+
+
+
+
+
+// asker user for any Table of multiplication 
+let n = +prompt("tell us any no.")
+console.log(`the multiplication table of ${n}`);
+for(let i = 1;i<11;i++){
+    console.log(`${n}X${i} = ${n*i}`);
+}
