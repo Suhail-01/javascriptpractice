@@ -520,17 +520,40 @@
 
 
 // sk the user for two numbers — one for “Fizz” and one for “Buzz” — then print the pattern up to 100.
-let fizzNum = +prompt("Enter a number for Fizz:");
-let buzzNum = +prompt("Enter a number for Buzz:");
+// let fizzNum = +prompt("Enter a number for Fizz:");
+// let buzzNum = +prompt("Enter a number for Buzz:");
 
-for (let i = 1; i <= 100; i++) {
-    if (i % fizzNum === 0 && i % buzzNum === 0) {
-        console.log("FizzBuzz");
-    } else if (i % fizzNum === 0) {
-        console.log("Fizz");
-    } else if (i % buzzNum === 0) {
-        console.log("Buzz");
-    } else {
-        console.log(i);
+// for (let i = 1; i <= 100; i++) {
+//     if (i % fizzNum === 0 && i % buzzNum === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % fizzNum === 0) {
+//         console.log("Fizz");
+//     } else if (i % buzzNum === 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+
+
+
+
+
+
+// 👉 Find who scored the highest marks and print both the name and score.
+let names = ["Amit", "Riya", "Suhail", "Neha", "Karan"];
+let marks = [87, 92, 76, 99, 85];
+
+let highest = marks[0];
+let topper = names[0];
+
+for (let i = 1; i < marks.length; i++) {
+    if (marks[i] > highest) {
+        highest = marks[i];
+        topper = names[i];
     }
 }
+
+console.log(`🎯 Topper is ${topper} with ${highest} marks!`);
+
