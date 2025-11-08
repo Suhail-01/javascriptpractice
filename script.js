@@ -564,12 +564,27 @@
 
 // ask user for a number 5 time if the no is +ve or -ve
 
-for(let i =1;i<6;i++){
-    let n = +prompt("tell us any no.");
-    if(n>0){
-        console.log("positive number");
-    }else if(n<0){
-        console.log("negatve number ");
-    }
+// for(let i =1;i<6;i++){
+//     let n = +prompt("tell us any no.");
+//     if(n>0){
+//         console.log("positive number");
+//     }else if(n<0){
+//         console.log("negatve number ");
+//     }
     
+// }
+
+
+
+
+
+
+
+// Atm simulator 
+let balance = 1000;
+let amt = +prompt("what is your balance..?")
+if(amt<=balance){
+    balance -= amt;
+}else{
+    console.log("Inscufficient balance");
 }
