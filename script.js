@@ -542,18 +542,34 @@
 
 
 // 👉 Find who scored the highest marks and print both the name and score.
-let names = ["Amit", "Riya", "Suhail", "Neha", "Karan"];
-let marks = [87, 92, 76, 99, 85];
+// let names = ["Amit", "Riya", "Suhail", "Neha", "Karan"];
+// let marks = [87, 92, 76, 99, 85];
 
-let highest = marks[0];
-let topper = names[0];
+// let highest = marks[0];
+// let topper = names[0];
 
-for (let i = 1; i < marks.length; i++) {
-    if (marks[i] > highest) {
-        highest = marks[i];
-        topper = names[i];
+// for (let i = 1; i < marks.length; i++) {
+//     if (marks[i] > highest) {
+//         highest = marks[i];
+//         topper = names[i];
+//     }
+// }
+
+// console.log(`🎯 Topper is ${topper} with ${highest} marks!`);
+
+
+
+
+
+
+// ask user for a number 5 time if the no is +ve or -ve
+
+for(let i =1;i<6;i++){
+    let n = +prompt("tell us any no.");
+    if(n>0){
+        console.log("positive number");
+    }else if(n<0){
+        console.log("negatve number ");
     }
+    
 }
-
-console.log(`🎯 Topper is ${topper} with ${highest} marks!`);
-
