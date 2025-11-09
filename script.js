@@ -581,10 +581,22 @@
 
 
 // Atm simulator 
-let balance = 1000;
-let amt = +prompt("what is your balance..?")
-if(amt<=balance){
-    balance -= amt;
-}else{
-    console.log("Inscufficient balance");
+// let balance = 1000;
+// let amt = +prompt("what is your balance..?")
+// if(amt<=balance){
+//     balance -= amt;
+// }else{
+//     console.log("Inscufficient balance");
+// }
+
+
+
+
+
+
+// starting with function
+function sum(a,b) {
+    return a+b;
 }
+console.log(sum(5,55));
+
