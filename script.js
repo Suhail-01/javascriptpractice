@@ -595,8 +595,27 @@
 
 
 // starting with function
-function sum(a,b) {
-    return a+b;
-}
-console.log(sum(5,55));
+// function sum(a,b) {
+//     return a+b;
+// }
+// console.log(sum(5,55));
 
+
+
+
+
+
+
+
+// check no is even or odd using functions 
+let p = +prompt("Enter a number:");
+
+function evodd(num) {
+  if (num % 2 === 0) {
+    console.log("It's even");
+  } else {
+    console.log("It's odd");
+  }
+}
+
+evodd(p);
