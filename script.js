@@ -635,8 +635,23 @@
 
 
 
-function toFahrenheit(celsius) {
-  return (celsius * 9/5) + 32;
+// function toFahrenheit(celsius) {
+//   return (celsius * 9/5) + 32;
+// }
+
+// console.log(toFahrenheit(30)); // Output: 86
+
+
+
+
+
+
+function canVote(age) {
+  if (age >= 18) {
+    console.log("You are eligible to vote ✅");
+  } else {
+    console.log("You are not eligible to vote ❌");
+  }
 }
 
-console.log(toFahrenheit(30)); // Output: 86
+canVote(17);
