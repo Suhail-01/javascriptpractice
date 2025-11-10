@@ -646,12 +646,26 @@
 
 
 
-function canVote(age) {
-  if (age >= 18) {
-    console.log("You are eligible to vote ✅");
+// function canVote(age) {
+//   if (age >= 18) {
+//     console.log("You are eligible to vote ✅");
+//   } else {
+//     console.log("You are not eligible to vote ❌");
+//   }
+// }
+
+// canVote(17);
+
+
+
+
+
+function maxNum(a, b) {
+  if (a > b) {
+    return a;
   } else {
-    console.log("You are not eligible to vote ❌");
+    return b;
   }
 }
 
-canVote(17);
+console.log(maxNum(10, 25)); // Output: 25
