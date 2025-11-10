@@ -608,14 +608,25 @@
 
 
 // check no is even or odd using functions 
-let p = +prompt("Enter a number:");
+// let p = +prompt("Enter a number:");
 
-function evodd(num) {
-  if (num % 2 === 0) {
-    console.log("It's even");
-  } else {
-    console.log("It's odd");
-  }
+// function evodd(num) {
+//   if (num % 2 === 0) {
+//     console.log("It's even");
+//   } else {
+//     console.log("It's odd");
+//   }
+// }
+
+// evodd(p);
+
+
+
+
+
+
+function square(num) {
+  return num * num;
 }
 
-evodd(p);
+console.log(square(5)); // Output: 25
