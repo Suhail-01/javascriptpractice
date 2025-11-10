@@ -690,14 +690,50 @@
 
 
 
-function countVowels(str) {
-  let count = 0;
-  for (let ch of str.toLowerCase()) {
-    if ("aeiou".includes(ch)) {
-      count++;
-    }
+// function countVowels(str) {
+//   let count = 0;
+//   for (let ch of str.toLowerCase()) {
+//     if ("aeiou".includes(ch)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countVowels("Suhail")); // Output: 3
+
+
+
+
+
+
+// Question: Write a function that returns the factorial of a number.
+// Example → 5! = 5 × 4 × 3 × 2 × 1 = 120
+function factorial(num) {
+  let fact = 1;
+  for (let i = 1; i <= num; i++) {
+    fact *= i;
   }
-  return count;
+  return fact;
 }
 
-console.log(countVowels("Suhail")); // Output: 3
+console.log(factorial(5)); // Output: 120
+
+
+
+
+
+
+
+
+
+
+
+// Question: Write a function that checks if a word reads the same forward and backward (like "madam", "level").
+function isPalindrome(str) {
+  let reversed = str.split('').reverse().join('');
+  return str === reversed;
+}
+
+console.log(isPalindrome("madam")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
