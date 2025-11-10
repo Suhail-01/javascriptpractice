@@ -660,12 +660,44 @@
 
 
 
-function maxNum(a, b) {
-  if (a > b) {
-    return a;
-  } else {
-    return b;
+// function maxNum(a, b) {
+//   if (a > b) {
+//     return a;
+//   } else {
+//     return b;
+//   }
+// }
+
+// console.log(maxNum(10, 25)); // Output: 25
+
+
+
+
+
+
+
+// Question: Write a function that prints the multiplication table of any number.
+// function table(num) {
+//   for (let i = 1; i <= 10; i++) {
+//     console.log(`${num} x ${i} = ${num * i}`);
+//   }
+// }
+
+// table(7);
+
+
+
+
+
+
+function countVowels(str) {
+  let count = 0;
+  for (let ch of str.toLowerCase()) {
+    if ("aeiou".includes(ch)) {
+      count++;
+    }
   }
+  return count;
 }
 
-console.log(maxNum(10, 25)); // Output: 25
+console.log(countVowels("Suhail")); // Output: 3
