@@ -625,8 +625,18 @@
 
 
 
-function square(num) {
-  return num * num;
+// function square(num) {
+//   return num * num;
+// }
+
+// console.log(square(5)); // Output: 25
+
+
+
+
+
+function toFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
 }
 
-console.log(square(5)); // Output: 25
+console.log(toFahrenheit(30)); // Output: 86
