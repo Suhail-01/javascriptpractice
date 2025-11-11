@@ -609,8 +609,25 @@
 
 
 // 1. Anonymous Function to Add Two Numbers
-let add = function(a, b) {
-  return a + b;
+// let add = function(a, b) {
+//   return a + b;
+// };
+
+// console.log(add(5, 10)); // Output: 15
+
+
+
+
+
+
+
+// 2. Anonymous Function to Check Even or Odd
+let checkEvenOdd = function(num) {
+  if (num % 2 === 0) {
+    console.log(`${num} is even`);
+  } else {
+    console.log(`${num} is odd`);
+  }
 };
 
-console.log(add(5, 10)); // Output: 15
+checkEvenOdd(7);
