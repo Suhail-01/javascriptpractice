@@ -622,12 +622,24 @@
 
 
 // 2. Anonymous Function to Check Even or Odd
-let checkEvenOdd = function(num) {
-  if (num % 2 === 0) {
-    console.log(`${num} is even`);
-  } else {
-    console.log(`${num} is odd`);
-  }
-};
+// let checkEvenOdd = function(num) {
+//   if (num % 2 === 0) {
+//     console.log(`${num} is even`);
+//   } else {
+//     console.log(`${num} is odd`);
+//   }
+// };
 
-checkEvenOdd(7);
+// checkEvenOdd(7);
+
+
+
+
+
+
+// 3. Anonymous Function in an Array Method
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(num) {
+  console.log(num * 2);
+});
