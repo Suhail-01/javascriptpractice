@@ -649,10 +649,26 @@
 
 
 
-function secondLargest(arr) {
-  let max = Math.max(...arr);
-  let filtered = arr.filter(num => num !== max);
-  return Math.max(...filtered);
+// Write a function that takes an array of numbers and returns the second largest number.
+// function secondLargest(arr) {
+//   let max = Math.max(...arr);
+//   let filtered = arr.filter(num => num !== max);
+//   return Math.max(...filtered);
+// }
+
+// console.log(secondLargest([10, 40, 30, 20, 50])); // Output: 40
+
+
+
+
+
+
+
+
+// Write a function that takes a sentence and returns how many words it contains.
+function countWords(sentence) {
+  let words = sentence.trim().split(/\s+/);
+  return words.length;
 }
 
-console.log(secondLargest([10, 40, 30, 20, 50])); // Output: 40
+console.log(countWords("AI is changing web development fast")); // Output: 6
