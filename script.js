@@ -638,8 +638,21 @@
 
 
 // 3. Anonymous Function in an Array Method
-let numbers = [1, 2, 3, 4, 5];
+// let numbers = [1, 2, 3, 4, 5];
 
-numbers.forEach(function(num) {
-  console.log(num * 2);
-});
+// numbers.forEach(function(num) {
+//   console.log(num * 2);
+// });
+
+
+
+
+
+
+function secondLargest(arr) {
+  let max = Math.max(...arr);
+  let filtered = arr.filter(num => num !== max);
+  return Math.max(...filtered);
+}
+
+console.log(secondLargest([10, 40, 30, 20, 50])); // Output: 40
