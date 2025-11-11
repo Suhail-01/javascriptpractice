@@ -595,9 +595,22 @@
 
 
 // array fliter like if we had to print same value in different arr
-let arr = [1,2,3,4,5];
-let arr2 = arr.filter(function (vals) {
-    return vals < 3;
-})
-console.log(arr2);
-console.log(arr);
+// let arr = [1,2,3,4,5];
+// let arr2 = arr.filter(function (vals) {
+//     return vals < 3;
+// })
+// console.log(arr2);
+// console.log(arr);
+
+
+
+
+
+
+
+// 1. Anonymous Function to Add Two Numbers
+let add = function(a, b) {
+  return a + b;
+};
+
+console.log(add(5, 10)); // Output: 15
