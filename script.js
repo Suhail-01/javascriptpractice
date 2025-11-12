@@ -663,12 +663,21 @@
 
 
 
-
-
 // Write a function that takes a sentence and returns how many words it contains.
-function countWords(sentence) {
-  let words = sentence.trim().split(/\s+/);
-  return words.length;
-}
+// function countWords(sentence) {
+//   let words = sentence.trim().split(/\s+/);
+//   return words.length;
+// }
 
-console.log(countWords("AI is changing web development fast")); // Output: 6
+// console.log(countWords("AI is changing web development fast")); // Output: 6
+
+
+
+
+
+// just for practice easy stuff
+function add(a,b) {
+    return a+b;
+}
+let ans = add(1,2)
+console.log(ans);
