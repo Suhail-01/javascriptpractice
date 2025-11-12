@@ -684,12 +684,23 @@
 
 
 
-
-function addUnlimited(...nums) {
-    nums.forEach(function (vals) {
-        console.log(vals);
+// used rest operator to store unlimitted values
+// function addUnlimited(...nums) {
+//     nums.forEach(function (vals) {
+//         console.log(vals);
         
-    })
-    console.log(nums);
-}
-addUnlimited(1,2,34,5,6,7,7);
+//     })
+//     console.log(nums);
+// }
+// addUnlimited(1,2,34,5,6,7,7);
+
+
+
+
+
+
+let arr = [1,2,3,4,5,6];
+let even = arr.filter(function (num) {
+    return num % 2 === 0;
+})
+console.log(even);
