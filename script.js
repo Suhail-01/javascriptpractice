@@ -723,3 +723,17 @@
 // console.log(longname);
 
 
+
+
+
+
+
+
+
+
+// 👉 Use .filter() to get only numbers greater than 10.
+let numbers = [3, 10, 15, 20, 25];
+let greater = numbers.filter(function (nums) {
+    return nums > 10;
+})
+console.log(greater);
