@@ -743,8 +743,19 @@
 
 
 // 👉 Get only the words that start with the letter 'p'.
-let words = ["pen", "pencil", "book", "copy", "eraser"];
-let start = words.filter(function (nums) {
-    return nums.startsWith ("p");
+// let words = ["pen", "pencil", "book", "copy", "eraser"];
+// let start = words.filter(function (nums) {
+//     return nums.startsWith ("p");
+// })
+// console.log(start);
+
+
+
+
+
+// 👉 Get only the ages that represent adults (18 or above).
+let ages = [12, 18, 22, 15, 30];
+let strt = ages.filter(function (nums) {
+    return nums >=18
 })
-console.log(start);
+console.log(strt);
