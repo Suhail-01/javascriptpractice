@@ -732,8 +732,19 @@
 
 
 // 👉 Use .filter() to get only numbers greater than 10.
-let numbers = [3, 10, 15, 20, 25];
-let greater = numbers.filter(function (nums) {
-    return nums > 10;
+// let numbers = [3, 10, 15, 20, 25];
+// let greater = numbers.filter(function (nums) {
+//     return nums > 10;
+// })
+// console.log(greater);
+
+
+
+
+
+// 👉 Get only the words that start with the letter 'p'.
+let words = ["pen", "pencil", "book", "copy", "eraser"];
+let start = words.filter(function (nums) {
+    return nums.startsWith ("p");
 })
-console.log(greater);
+console.log(start);
