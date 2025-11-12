@@ -676,8 +676,20 @@
 
 
 // just for practice easy stuff
-function add(a,b) {
-    return a+b;
+// function add(a,b) {
+//     return a+b;
+// }
+// let ans = add(1,2)
+// console.log(ans);
+
+
+
+
+function addUnlimited(...nums) {
+    nums.forEach(function (vals) {
+        console.log(vals);
+        
+    })
+    console.log(nums);
 }
-let ans = add(1,2)
-console.log(ans);
+addUnlimited(1,2,34,5,6,7,7);
