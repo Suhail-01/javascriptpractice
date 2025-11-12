@@ -698,9 +698,28 @@
 
 
 
+// Filter even numbers using  filter
+// let arr = [1,2,3,4,5,6];
+// let even = arr.filter(function (num) {
+//     return num % 2 === 0;
+// })
+// console.log(even);
 
-let arr = [1,2,3,4,5,6];
-let even = arr.filter(function (num) {
-    return num % 2 === 0;
-})
-console.log(even);
+
+
+
+
+
+
+
+
+
+
+// Filter names longer than 4 letters  using filetr
+// let names = ["akii", "hsyrb","gst","gt","vstsuw"];
+// let longname = names.filter(function (num) {
+//     return num.length > 4;
+// })
+// console.log(longname);
+
+
