@@ -763,13 +763,28 @@
 
 
 
-let students = [
-  { name: "Ali", marks: 35 },
-  { name: "Suhail", marks: 80 },
-  { name: "Zara", marks: 50 },
-  { name: "Rahman", marks: 25 }
-];
-let passed = students.filter(function (student) {
-    return student.marks>=50;
-})
-console.log(passed);
+// Filter objects by property 
+// let students = [
+//   { name: "Ali", marks: 35 },
+//   { name: "Suhail", marks: 80 },
+//   { name: "Zara", marks: 50 },
+//   { name: "Rahman", marks: 25 }
+// ];
+// let passed = students.filter(function (student) {
+//     return student.marks>=50;
+// })
+// console.log(passed);
+
+
+
+
+
+// Filter words that end with a vowel
+let words = ["apple", "mango", "kela", "nareal", "khiraa"];
+
+let vowel = words.filter(function (word) {
+  let lastChar = word[word.length - 1]; // get last letter of each word
+  return ["a", "e", "i", "o", "u"].includes(lastChar); // check if it's a vowel
+});
+
+console.log(vowel);
