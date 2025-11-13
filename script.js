@@ -780,11 +780,32 @@
 
 
 // Filter words that end with a vowel
-let words = ["apple", "mango", "kela", "nareal", "khiraa"];
+// let words = ["apple", "mango", "kela", "nareal", "khiraa"];
 
-let vowel = words.filter(function (word) {
-  let lastChar = word[word.length - 1]; // get last letter of each word
-  return ["a", "e", "i", "o", "u"].includes(lastChar); // check if it's a vowel
-});
+// let vowel = words.filter(function (word) {
+//   let lastChar = word[word.length - 1]; // get last letter of each word
+//   return ["a", "e", "i", "o", "u"].includes(lastChar); // check if it's a vowel
+// });
 
-console.log(vowel);
+// console.log(vowel);
+
+
+
+
+
+
+
+
+// Use .filter() and .includes() together to get only the products that contain the word "apple".
+let products = [
+  "red apple",
+  "blue pen",
+  "black notebook",
+  "green apple",
+  "yellow pencil",
+  "white eraser"
+];
+let get  = products.filter(function (nums) {
+  return nums.includes("apple")
+})
+console.log(get);
