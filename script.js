@@ -754,8 +754,22 @@
 
 
 // 👉 Get only the ages that represent adults (18 or above).
-let ages = [12, 18, 22, 15, 30];
-let strt = ages.filter(function (nums) {
-    return nums >=18
+// let ages = [12, 18, 22, 15, 30];
+// let strt = ages.filter(function (nums) {
+//     return nums >=18
+// })
+// console.log(strt);
+
+
+
+
+let students = [
+  { name: "Ali", marks: 35 },
+  { name: "Suhail", marks: 80 },
+  { name: "Zara", marks: 50 },
+  { name: "Rahman", marks: 25 }
+];
+let passed = students.filter(function (student) {
+    return student.marks>=50;
 })
-console.log(strt);
+console.log(passed);
