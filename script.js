@@ -797,15 +797,30 @@
 
 
 // Use .filter() and .includes() together to get only the products that contain the word "apple".
-let products = [
-  "red apple",
-  "blue pen",
-  "black notebook",
-  "green apple",
-  "yellow pencil",
-  "white eraser"
-];
-let get  = products.filter(function (nums) {
-  return nums.includes("apple")
+// let products = [
+//   "red apple",
+//   "blue pen",
+//   "black notebook",
+//   "green apple",
+//   "yellow pencil",
+//   "white eraser"
+// ];
+// let get  = products.filter(function (nums) {
+//   return nums.includes("apple")
+// })
+// console.log(get);
+
+
+
+
+
+//Use .filter() and a flag to check:
+// Did the array contain any number greater than 10?
+// Set flag = true if such a number exists.
+let nums = [1, 5, 8, 12, 3, 20];
+let flag = false;
+nums.filter(function(number) {
+  if(number > 10) flag = true;
 })
-console.log(get);
+
+console.log(flag);
