@@ -836,14 +836,43 @@
 // Use .filter() and a flag to check:
 // Does the array contain any name that starts with "s"?
 // If found, set flag = true.
-let names = ["ali", "kiran", "suhail", "zara"];
+
+
+// let names = ["ali", "kiran", "suhail", "zara"];
+// let flag = false;
+
+// names.filter(function(name) {
+//   if (name.startsWith("s")) {
+//     flag = true;
+//     console.log(`${name} starts with s`);
+//   }
+// });
+// console.log(flag);
+
+
+
+
+
+
+
+
+
+
+// Find if Any Product Is Out of Stock
+// Use .filter() + flag to check:
+// Is there ANY product whose stock is 0?
+// If yes, set flag = true.
+
+let products = [
+  { name: "Laptop", stock: 12 },
+  { name: "Mouse", stock: 0 },
+  { name: "Keyboard", stock: 5 },
+  { name: "Monitor", stock: 8 }
+];
 let flag = false;
-
-names.filter(function(name) {
-  if (name.startsWith("s")) {
+products.filter(function (items) {
+  if(items.stock === 0){
     flag = true;
-    console.log(`${name} starts with s`);
   }
-});
-
+})
 console.log(flag);
