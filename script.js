@@ -817,10 +817,33 @@
 //Use .filter() and a flag to check:
 // Did the array contain any number greater than 10?
 // Set flag = true if such a number exists.
-let nums = [1, 5, 8, 12, 3, 20];
+
+// let nums = [1, 5, 8, 12, 3, 20];
+// let flag = false;
+// nums.filter(function(number) {
+//   if(number > 10) flag = true;
+// })
+
+// console.log(flag);
+
+
+
+
+
+
+
+
+// Use .filter() and a flag to check:
+// Does the array contain any name that starts with "s"?
+// If found, set flag = true.
+let names = ["ali", "kiran", "suhail", "zara"];
 let flag = false;
-nums.filter(function(number) {
-  if(number > 10) flag = true;
-})
+
+names.filter(function(name) {
+  if (name.startsWith("s")) {
+    flag = true;
+    console.log(`${name} starts with s`);
+  }
+});
 
 console.log(flag);
