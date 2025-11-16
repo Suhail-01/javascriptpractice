@@ -906,12 +906,28 @@
 
 
 
+
+
+
+
+
+
 // make a nested function where the inner one prints a variable from the outer one  :- this is an closers
-function parent() {
-    let a = 44;
-    function child() {
-        console.log(a);
-    }
-    child();
-}
-parent();
+// function parent() {
+//     let a = 44;
+//     function child() {
+//         console.log(a);
+//     }
+//     child();
+// }
+// parent(); 
+
+
+
+
+
+// Eight 5 fruit list using array and use add one fruit at the end and remove from the beginning
+// let arr = ["apple", "banana", "cherry", "date", "elderberry"];
+// arr.push("fig");
+// arr.unshift();
+ 
