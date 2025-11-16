@@ -884,12 +884,22 @@
 
 
 // Sum of Unlimited Numbers Using Rest Operator
-function addunlimited(...nums) {
-  let sum = 0;
-  nums.forEach(function (vals){
-    sum = sum + vals;
-  });
-  console.log(sum);
+// function addunlimited(...nums) {
+//   let sum = 0;
+//   nums.forEach(function (vals){
+//     sum = sum + vals;
+//   });
+//   console.log(sum);
   
-}
-addunlimited(1,2,3,4,5,6,7,8,9);
+// }
+// addunlimited(1,2,3,4,5,6,7,8,9);
+
+ 
+
+
+
+// IIFE :- immdeatly invoked functions expression
+(function () {
+    console.log("i run immmdeatliy");
+    
+}) ();
