@@ -863,16 +863,33 @@
 // Is there ANY product whose stock is 0?
 // If yes, set flag = true.
 
-let products = [
-  { name: "Laptop", stock: 12 },
-  { name: "Mouse", stock: 0 },
-  { name: "Keyboard", stock: 5 },
-  { name: "Monitor", stock: 8 }
-];
-let flag = false;
-products.filter(function (items) {
-  if(items.stock === 0){
-    flag = true;
-  }
-})
-console.log(flag);
+// let products = [
+//   { name: "Laptop", stock: 12 },
+//   { name: "Mouse", stock: 0 },
+//   { name: "Keyboard", stock: 5 },
+//   { name: "Monitor", stock: 8 }
+// ];
+// let flag = false;
+// products.filter(function (items) {
+//   if(items.stock === 0){
+//     flag = true;
+//   }
+// })
+// console.log(flag);
+
+
+
+
+
+
+
+// Sum of Unlimited Numbers Using Rest Operator
+function addunlimited(...nums) {
+  let sum = 0;
+  nums.forEach(function (vals){
+    sum = sum + vals;
+  });
+  console.log(sum);
+  
+}
+addunlimited(1,2,3,4,5,6,7,8,9);
