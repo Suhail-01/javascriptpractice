@@ -931,3 +931,13 @@
 // arr.push("fig");
 // arr.unshift();
  
+
+
+let obj = {
+    name: "Suhail",
+    age: 22,
+    city : "solapur",
+}
+for(let key in obj){
+    console.log(obj[key]);
+}
