@@ -899,7 +899,19 @@
 
 
 // IIFE :- immdeatly invoked functions expression
-(function () {
-    console.log("i run immmdeatliy");
+// (function () {
+//     console.log("i run immmdeatliy");
     
-}) ();
+// }) ();
+
+
+
+// make a nested function where the inner one prints a variable from the outer one  :- this is an closers
+function parent() {
+    let a = 44;
+    function child() {
+        console.log(a);
+    }
+    child();
+}
+parent();
