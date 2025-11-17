@@ -1063,7 +1063,18 @@
 
 
 // Use .filter() to create a new array with only the odd numbers from the original array.
-let arr = [1,2,3,4,5,6,7,8,9,10];
-let newarr = arr.filter(function (vals) {
-    return vals % 2 !==0;
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// let newarr = arr.filter(function (vals) {
+//     return vals % 2 !==0;
+// })
+
+
+
+
+
+
+// creat an array of names and use .every() , some(), to check if all names have more than 3 letters.
+let names = ["suhail","kiran","akii","hsyrb","gst","gt","vstsuw"];
+let newarr = names.every(function (vals) {
+    return vals.length > 3;
 })
