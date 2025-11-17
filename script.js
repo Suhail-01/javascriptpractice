@@ -1101,15 +1101,31 @@
 
 
 // GUESS THE OUTPUT -2
-let users = [
-  { name: "Suhail", age: 20 },
-  { name: "Ali", age: 17 },
-  { name: "Zara", age: 25 }
-];
+// let users = [
+//   { name: "Suhail", age: 20 },
+//   { name: "Ali", age: 17 },
+//   { name: "Zara", age: 25 }
+// ];
 
-let ages = users.map(function (user) {
-  let { age } = user;
-  return age + 5;
+// let ages = users.map(function (user) {
+//   let { age } = user;
+//   return age + 5;
+// });
+
+// console.log(ages);
+
+
+
+
+
+
+
+
+// guesss the output - 3
+let fruits = ["apple", "mango", "grapes", "banana", "pineapple"];
+
+let result = fruits.filter(function (item) {
+  return item.includes("ap");
 });
 
-console.log(ages);
+console.log(result);
