@@ -1087,11 +1087,29 @@
 
 
 // GUESS THE OUTPUT 
-let items = ["sun", "star", "sky", "stone", "moon"];
+// let items = ["sun", "star", "sky", "stone", "moon"];
 
-let result = items
-  .filter(word => word.startsWith("s"))
-  .map(word => word.toUpperCase())
-  .filter(word => word.includes("AR"));
+// let result = items
+//   .filter(word => word.startsWith("s"))
+//   .map(word => word.toUpperCase())
+//   .filter(word => word.includes("AR"));
 
-console.log(result);
+// console.log(result);
+
+
+
+
+
+// GUESS THE OUTPUT -2
+let users = [
+  { name: "Suhail", age: 20 },
+  { name: "Ali", age: 17 },
+  { name: "Zara", age: 25 }
+];
+
+let ages = users.map(function (user) {
+  let { age } = user;
+  return age + 5;
+});
+
+console.log(ages);
