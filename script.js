@@ -1019,12 +1019,25 @@
 
 
 // this keyword changes based on how a function is called
-let obj= {
-    name:"Suhail",
-    age:22,
-    gmail:"shs@gmail.com",
-    fnc:function () {
-        console.log(this);
-    },
-};
-obj.fnc();
+// let obj= {
+//     name:"Suhail",
+//     age:22,
+//     gmail:"shs@gmail.com",
+//     fnc:function () {
+//         console.log(this);
+//     },
+// };
+// obj.fnc();
+
+
+
+
+
+
+
+// Use .map() to create a new array with the squares of each number from the original array.
+let arr = [1,2,3,4,5,6,7];
+let newarr = arr.map(function (vals) {
+    return vals * vals;
+})
+console.log(newarr);
