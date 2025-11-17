@@ -1055,7 +1055,15 @@
 
 
 // Use .filter() to create a new array with only the even numbers from the original array.
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// let newarr = arr.filter(function (vals) {
+//     return vals % 2 ===0;
+// })
+
+
+
+// Use .filter() to create a new array with only the odd numbers from the original array.
 let arr = [1,2,3,4,5,6,7,8,9,10];
 let newarr = arr.filter(function (vals) {
-    return vals % 2 ===0;
+    return vals % 2 !==0;
 })
