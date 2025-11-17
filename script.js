@@ -1036,8 +1036,26 @@
 
 
 // Use .map() to create a new array with the squares of each number from the original array.
-let arr = [1,2,3,4,5,6,7];
-let newarr = arr.map(function (vals) {
-    return vals * vals;
+// let arr = [1,2,3,4,5,6,7];
+// let newarr = arr.map(function (vals) {
+//     return vals * vals;
+// })
+// console.log(newarr);
+
+
+
+// let arr = [1,2,3,4,5,6,7];
+// let newarr = arr.map(function (vals) {
+//     return vals*vals;
+// })
+// console.log(newarr);
+
+
+
+
+
+// Use .filter() to create a new array with only the even numbers from the original array.
+let arr = [1,2,3,4,5,6,7,8,9,10];
+let newarr = arr.filter(function (vals) {
+    return vals % 2 ===0;
 })
-console.log(newarr);
