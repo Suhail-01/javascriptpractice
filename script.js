@@ -933,11 +933,52 @@
  
 
 
-let obj = {
-    name: "Suhail",
-    age: 22,
-    city : "solapur",
-}
-for(let key in obj){
-    console.log(obj[key]);
-}
+
+
+
+// creat an object person with key name, age , city, and print each key's value.
+// let obj = {
+//     name: "Suhail",
+//     age: 22,
+//     city : "solapur",
+// }
+// for(let key in obj){
+//     console.log(obj[key]);
+// }
+
+
+
+
+
+
+
+
+
+// Impure Functions
+// An impure function may rely on or modify external state. 
+// It can have side effects, like changing a global variable, doing I/O (console log, network request), or producing different output for the same input (because of randomness, time, etc.). 
+// Because of side effects, impure functions are less predictable and harder to test.
+
+// let counter = 0;
+// function other(params) {
+//     counter +=1;
+//     return counter;
+// }
+// other();
+
+
+
+
+
+
+
+// Pure Functions
+// A pure function always returns the same output for the same input. 
+// It has no side effects — it doesn’t change or rely on any state outside itself (no modifying global variables, no I/O, no randomness). 
+// Because of this, pure functions are predictable and easy to test / reason about.
+
+
+// function name(a,b) {
+//     console.log(a+b);
+// }
+// name(22,55)
