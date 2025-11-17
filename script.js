@@ -1074,7 +1074,24 @@
 
 
 // creat an array of names and use .every() , some(), to check if all names have more than 3 letters.
-let names = ["suhail","kiran","akii","hsyrb","gst","gt","vstsuw"];
-let newarr = names.every(function (vals) {
-    return vals.length > 3;
-})
+// let names = ["suhail","kiran","akii","hsyrb","gst","gt","vstsuw"];
+// let newarr = names.every(function (vals) {
+//     return vals.length > 3;
+// })
+
+
+
+
+
+
+
+
+// GUESS THE OUTPUT 
+let items = ["sun", "star", "sky", "stone", "moon"];
+
+let result = items
+  .filter(word => word.startsWith("s"))
+  .map(word => word.toUpperCase())
+  .filter(word => word.includes("AR"));
+
+console.log(result);
