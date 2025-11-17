@@ -1001,10 +1001,30 @@
 // You must not modify any external variable.
 // You must not use console.log() inside the function.
 // Only return the result.
-function applydiscount(price,discount) {
-    FinalPrice = price-(price * discount / 100)
-    return FinalPrice;
-}
-let result = applydiscount(2234,43);
-console.log(result);
-applydiscount();
+
+            //   CODE    
+            
+// function applydiscount(price,discount) {
+//     FinalPrice = price-(price * discount / 100)
+//     return FinalPrice;
+// }
+// let result = applydiscount(2234,43);
+// console.log(result);
+// applydiscount();
+
+
+
+
+
+
+
+// this keyword changes based on how a function is called
+let obj= {
+    name:"Suhail",
+    age:22,
+    gmail:"shs@gmail.com",
+    fnc:function () {
+        console.log(this);
+    },
+};
+obj.fnc();
