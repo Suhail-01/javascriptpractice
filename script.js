@@ -982,3 +982,29 @@
 //     console.log(a+b);
 // }
 // name(22,55)
+
+
+
+
+
+
+
+
+
+
+// Create a Pure Function for Discount
+// Write a pure function called applyDiscount that:
+// takes a price
+// takes a discount percentage
+// returns the new price after discount
+// ⚠️ Requirements:
+// You must not modify any external variable.
+// You must not use console.log() inside the function.
+// Only return the result.
+function applydiscount(price,discount) {
+    FinalPrice = price-(price * discount / 100)
+    return FinalPrice;
+}
+let result = applydiscount(2234,43);
+console.log(result);
+applydiscount();
