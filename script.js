@@ -1122,10 +1122,26 @@
 
 
 // guesss the output - 3
-let fruits = ["apple", "mango", "grapes", "banana", "pineapple"];
+// let fruits = ["apple", "mango", "grapes", "banana", "pineapple"];
 
-let result = fruits.filter(function (item) {
-  return item.includes("ap");
-});
+// let result = fruits.filter(function (item) {
+//   return item.includes("ap");
+// });
 
-console.log(result);
+// console.log(result);
+
+
+
+
+
+
+
+
+// starting with the DOM
+let text = document.getElementById("title")
+text.textContent = "hey bruhhhhhh"
+
+let head = document.getElementById("list")
+let newItem = document.createElement("li")
+newItem.textContent= "custerd apple";
+head.appendChild(newItem)
