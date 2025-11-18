@@ -1150,8 +1150,26 @@
 
 
 // Add an event listener so that when the button is clicked
-let b = document.querySelector(".btn")
-b.addEventListener("click", function (event) {
-  console.log(`You clicked: ${event.target.textContent}`);
+// let b = document.querySelector(".btn")
+// b.addEventListener("click", function (event) {
+//   console.log(`You clicked: ${event.target.textContent}`);
   
-})
+// })
+
+
+
+
+
+
+
+// best example of event bubbling
+let parent = document.querySelector("#parent");
+let child = document.querySelector("#child");
+
+child.addEventListener("click", function () {
+  console.log("Child clicked");
+});
+
+parent.addEventListener("click", function () {
+  console.log("Parent clicked");
+});
