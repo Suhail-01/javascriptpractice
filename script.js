@@ -1138,10 +1138,20 @@
 
 
 // starting with the DOM
-let text = document.getElementById("title")
-text.textContent = "hey bruhhhhhh"
+// let text = document.getElementById("title")
+// text.textContent = "hey bruhhhhhh"
 
-let head = document.getElementById("list")
-let newItem = document.createElement("li")
-newItem.textContent= "custerd apple";
-head.appendChild(newItem)
+// let head = document.getElementById("list")
+// let newItem = document.createElement("li")
+// newItem.textContent= "custerd apple";
+// head.appendChild(newItem)
+
+
+
+
+// Add an event listener so that when the button is clicked
+let b = document.querySelector(".btn")
+b.addEventListener("click", function (event) {
+  console.log(`You clicked: ${event.target.textContent}`);
+  
+})
