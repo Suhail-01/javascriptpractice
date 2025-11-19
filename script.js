@@ -1257,19 +1257,27 @@
 
 
 // makes button with 0 and increament + decreament if we hitt 0 < 0 then alert
-let inc = document.querySelector("#inc")
-let decs = document.querySelector("#decs")
-let h2 = document.querySelector("h2")
-let a = 0;
-inc.addEventListener("click",function () {
-  a++;
-  h2.innerHTML = a;
-})
-decs.addEventListener("click",function () {
-  if(a<=0){
-    alert("cannot go below 0");
-    return;
-  }
-  a--;
-  h2.innerHTML = a;
-})
+// let inc = document.querySelector("#inc")
+// let decs = document.querySelector("#decs")
+// let h2 = document.querySelector("h2")
+// let a = 0;
+// inc.addEventListener("click",function () {
+//   a++;
+//   h2.innerHTML = a;
+// })
+// decs.addEventListener("click",function () {
+//   if(a<=0){
+//     alert("cannot go below 0");
+//     return;
+//   }
+//   a--;
+//   h2.innerHTML = a;
+// })
+
+
+
+
+// Generate a random number between 0 and 2
+// let a = Math.random()*3;
+// let b = Math.floor(a);
+// console.log(b);
