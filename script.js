@@ -1197,6 +1197,38 @@
 
 
 
+// Change background color 
+
+// let body = document.querySelector("body");
+// let isDark = false;  // state flag
+
+// body.addEventListener("click", function (event) {
+//   if (event.target === body) {
+
+//     if (isDark === false) {
+//       body.style.backgroundColor = "darkgrey";
+//       isDark = true;
+//     } else {
+//       body.style.backgroundColor = "white"; // or your original color
+//       isDark = false;
+//     }
+
+//   }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Change background color of input based on key pressed:
 
 // Press "a" → yellow
@@ -1204,17 +1236,16 @@
 // Press "b" → lightgreen
 
 // Otherwise → white
+let box = document.querySelector("#box");
 
-let body = document.querySelector("body");
-let isdark = false;
-body.addEventListener("keydown", function (event) {
+box.addEventListener("keydown", function (event) {
   if (event.key === "a") {
-    body.style.backgroundColor = "red";
-    if(isdark === "b"){
-      body.style.backgroundColor = "yellow";
-    }else{
-      body.style.backgroundColor = "black";
-      isdark = false;
-    }
+    box.style.backgroundColor = "yellow";
   } 
+  else if (event.key === "b") {
+    box.style.backgroundColor = "lightgreen";
+  } 
+  else {
+    box.style.backgroundColor = "white";
+  }
 });
