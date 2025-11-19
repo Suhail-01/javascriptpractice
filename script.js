@@ -1163,13 +1163,58 @@
 
 
 // best example of event bubbling
-let parent = document.querySelector("#parent");
-let child = document.querySelector("#child");
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
 
-child.addEventListener("click", function () {
-  console.log("Child clicked");
-});
+// child.addEventListener("click", function () {
+//   console.log("Child clicked");
+// });
 
-parent.addEventListener("click", function () {
-  console.log("Parent clicked");
+// parent.addEventListener("click", function () {
+//   console.log("Parent clicked");
+// });
+
+
+
+
+
+// let body = document.querySelector("body");
+// body.addEventListener("click", function (event) {
+//   if(event.target ===body){
+//     body.style.backgroundColor = "lightgrey";
+//   }else{
+//     body.style.backgroundColor = "black";
+//   }
+// });
+
+
+
+
+
+
+
+
+
+
+
+// Change background color of input based on key pressed:
+
+// Press "a" → yellow
+
+// Press "b" → lightgreen
+
+// Otherwise → white
+
+let body = document.querySelector("body");
+let isdark = false;
+body.addEventListener("keydown", function (event) {
+  if (event.key === "a") {
+    body.style.backgroundColor = "red";
+    if(isdark === "b"){
+      body.style.backgroundColor = "yellow";
+    }else{
+      body.style.backgroundColor = "black";
+      isdark = false;
+    }
+  } 
 });
