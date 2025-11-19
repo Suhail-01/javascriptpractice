@@ -1284,5 +1284,27 @@
 
 
 // even we can make it into one line 
-let a = Math.floor(Math.random()*4);
-console.log(a);
+// let a = Math.floor(Math.random()*4);
+// console.log(a);
+
+
+
+
+
+
+
+
+
+
+// Change Box Color on Button Click to a Random RGB Color
+let box = document.querySelector("#box");
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+  let c1 = Math.floor(Math.random() * 256);
+  let c2 = Math.floor(Math.random() * 256);
+  let c3 = Math.floor(Math.random() * 256);
+
+  box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+  console.log(c1,c2,c3); // just so you can see it's working
+});
