@@ -1236,16 +1236,40 @@
 // Press "b" → lightgreen
 
 // Otherwise → white
-let box = document.querySelector("#box");
+// let box = document.querySelector("#box");
 
-box.addEventListener("keydown", function (event) {
-  if (event.key === "a") {
-    box.style.backgroundColor = "yellow";
-  } 
-  else if (event.key === "b") {
-    box.style.backgroundColor = "lightgreen";
-  } 
-  else {
-    box.style.backgroundColor = "white";
+// box.addEventListener("keydown", function (event) {
+//   if (event.key === "a") {
+//     box.style.backgroundColor = "yellow";
+//   } 
+//   else if (event.key === "b") {
+//     box.style.backgroundColor = "lightgreen";
+//   } 
+//   else {
+//     box.style.backgroundColor = "white";
+//   }
+// });
+
+
+
+
+
+
+
+// makes button with 0 and increament + decreament if we hitt 0 < 0 then alert
+let inc = document.querySelector("#inc")
+let decs = document.querySelector("#decs")
+let h2 = document.querySelector("h2")
+let a = 0;
+inc.addEventListener("click",function () {
+  a++;
+  h2.innerHTML = a;
+})
+decs.addEventListener("click",function () {
+  if(a<=0){
+    alert("cannot go below 0");
+    return;
   }
-});
+  a--;
+  h2.innerHTML = a;
+})
