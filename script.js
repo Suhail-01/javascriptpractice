@@ -1281,3 +1281,8 @@
 // let a = Math.random()*3;
 // let b = Math.floor(a);
 // console.log(b);
+
+
+// even we can make it into one line 
+let a = Math.floor(Math.random()*4);
+console.log(a);
