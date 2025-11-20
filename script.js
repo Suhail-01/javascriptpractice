@@ -1274,14 +1274,10 @@
 //   h2.innerHTML = a;
 // })
 
-
-
-
 // Generate a random number between 0 and 2
 // let a = Math.random()*3;
 // let b = Math.floor(a);
 // console.log(b);
-
 
 // even we can make it into one line 
 // let a = Math.floor(Math.random()*4);
@@ -1291,20 +1287,34 @@
 
 
 
-
-
-
-
-
 // Change Box Color on Button Click to a Random RGB Color
-let box = document.querySelector("#box");
+// let box = document.querySelector("#box");
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", function () {
+//   let c1 = Math.floor(Math.random() * 256);
+//   let c2 = Math.floor(Math.random() * 256);
+//   let c3 = Math.floor(Math.random() * 256);
+
+//   box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+//   console.log(c1,c2,c3); // just so you can see it's working
+// });
+
+
+
+
+
+
+
+
+
+// generate random font size between 10px and 60px on button click
+let txt = document.querySelector("#text");
 let btn = document.querySelector("button");
 
 btn.addEventListener("click", function () {
-  let c1 = Math.floor(Math.random() * 256);
-  let c2 = Math.floor(Math.random() * 256);
-  let c3 = Math.floor(Math.random() * 256);
+  let inc = Math.floor(Math.random() * 100) + 10; 
+  // random size between 10px and 60px
 
-  box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
-  console.log(c1,c2,c3); // just so you can see it's working
+  txt.style.fontSize = inc + "px";
 });
