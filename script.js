@@ -1332,6 +1332,9 @@
 // })
 
 
+
+
+// again random fruit from array
 let arr = ["apple", "banana", "cherry", "date"];
 let a = Math.floor(Math.random()*arr.length);
 console.log(arr[a]);
