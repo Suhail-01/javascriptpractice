@@ -1309,12 +1309,24 @@
 
 
 // generate random font size between 10px and 60px on button click
-let txt = document.querySelector("#text");
-let btn = document.querySelector("button");
+// let txt = document.querySelector("#text");
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", function () {
+//   let inc = Math.floor(Math.random() * 100) + 10; 
+//   // random size between 10px and 60px
+//   txt.style.fontSize = inc + "px";
+// });
 
-btn.addEventListener("click", function () {
-  let inc = Math.floor(Math.random() * 100) + 10; 
-  // random size between 10px and 60px
 
-  txt.style.fontSize = inc + "px";
-});
+
+
+// Random Position Box on Button Click
+let box = document.querySelector("#box");
+let nov = document.querySelector("#move");
+
+nov.addEventListener("click", function (ops) {
+  let randomX = Math.floor(Math.random() * 300);
+  let randomY = Math.floor(Math.random()*300)
+  box.style.left = randomX + "px";
+  box.style.top = randomY + "px";
+})
