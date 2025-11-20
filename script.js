@@ -1321,12 +1321,17 @@
 
 
 // Random Position Box on Button Click
-let box = document.querySelector("#box");
-let nov = document.querySelector("#move");
+// let box = document.querySelector("#box");
+// let nov = document.querySelector("#move");
 
-nov.addEventListener("click", function (ops) {
-  let randomX = Math.floor(Math.random() * 300);
-  let randomY = Math.floor(Math.random()*300)
-  box.style.left = randomX + "px";
-  box.style.top = randomY + "px";
-})
+// nov.addEventListener("click", function (ops) {
+//   let randomX = Math.floor(Math.random() * 300);
+//   let randomY = Math.floor(Math.random()*300)
+//   box.style.left = randomX + "px";
+//   box.style.top = randomY + "px";
+// })
+
+
+let arr = ["apple", "banana", "cherry", "date"];
+let a = Math.floor(Math.random()*arr.length);
+console.log(arr[a]);
