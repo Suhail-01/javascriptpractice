@@ -1335,6 +1335,29 @@
 
 
 // again random fruit from array
-let arr = ["apple", "banana", "cherry", "date"];
-let a = Math.floor(Math.random()*arr.length);
-console.log(arr[a]);
+// let arr = ["apple", "banana", "cherry", "date"];
+// let a = Math.floor(Math.random()*arr.length);
+// console.log(arr[a]);
+
+
+
+
+
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", function () {
+//     var h1 = document.createElement("h1");
+//     h1.innerHTML = "you clicked the button";
+//     console.log(h1);
+// })
+
+
+
+
+
+
+// create and append element
+// var btn = document.createElement('h2');
+// btn.innerHTML = "click here";
+// btn.style.color = "goldenrod";
+// let main = document.querySelector("main");
+// main.appendChild(btn);
