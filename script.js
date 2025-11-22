@@ -1406,11 +1406,34 @@
 
 
 // Replace existing DOM element
-let list = document.querySelector("#list");
-let newItem = document.createElement("li");
-newItem.textContent = "New Updated Item";
+// let list = document.querySelector("#list");
+// let newItem = document.createElement("li");
+// newItem.textContent = "New Updated Item";
 
-let oldItem = list.querySelector("li");
+// let oldItem = list.querySelector("li");
 
-list.replaceChild(newItem, oldItem);
+// list.replaceChild(newItem, oldItem);
 
+
+
+
+
+
+
+
+
+// ❓ Task:
+// When the user clicks ANY <li>:
+// Read the food’s price from data-price
+// Show an alert:
+
+ const menu = document.getElementById("menu");
+  menu.addEventListener("click", function (event) {
+    const li = event.target.closest("li");
+    if (!li || !menu.contains(li)) return;
+
+    const name = li.textContent.trim();
+    const price = li.dataset.price; 
+
+    alert(`You selected ${name}. Price: ${price}`);
+  });
