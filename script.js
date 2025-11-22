@@ -1427,13 +1427,39 @@
 // Read the food’s price from data-price
 // Show an alert:
 
- const menu = document.getElementById("menu");
-  menu.addEventListener("click", function (event) {
-    const li = event.target.closest("li");
-    if (!li || !menu.contains(li)) return;
+//  const menu = document.getElementById("menu");
+//   menu.addEventListener("click", function (event) {
+//     const li = event.target.closest("li");
+//     if (!li || !menu.contains(li)) return;
 
-    const name = li.textContent.trim();
-    const price = li.dataset.price; 
+//     const name = li.textContent.trim();
+//     const price = li.dataset.price; 
 
-    alert(`You selected ${name}. Price: ${price}`);
-  });
+//     alert(`You selected ${name}. Price: ${price}`);
+//   });
+
+
+
+
+
+
+
+
+
+
+// ❓ Task: When the button is clicked: Create a new <p> with text "This is NEW updated text" Replace the old <p> using replaceChild() The <div> remains the same — only its child changes
+// let container = document.getElementById("container");
+// let oldPara = document.getElementById("old");
+// let btn = document.getElementById("update");
+
+btn.addEventListener("click", function () {
+  // 1. Create new p element
+  let newPara = document.createElement("p");
+  newPara.textContent = "This is NEW updated text";
+
+  // 2. Replace old <p> with new <p>
+  container.replaceChild(newPara, oldPara);
+
+  // 3. (Optional) Update oldPara variable if you want further changes
+  oldPara = newPara;
+});
