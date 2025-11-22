@@ -1390,9 +1390,27 @@
 
 
 // Find nearest parent element
-let btn = document.querySelector(".btn");
+// let btn = document.querySelector(".btn");
 
-btn.addEventListener("click", function (event) {
-  let parentCard = event.target.closest(".card");
-  parentCard.style.border = "2px solid red";
-});
+// btn.addEventListener("click", function (event) {
+//   let parentCard = event.target.closest(".card");
+//   parentCard.style.border = "2px solid red";
+// });
+
+
+
+
+
+
+
+
+
+// Replace existing DOM element
+let list = document.querySelector("#list");
+let newItem = document.createElement("li");
+newItem.textContent = "New Updated Item";
+
+let oldItem = list.querySelector("li");
+
+list.replaceChild(newItem, oldItem);
+
