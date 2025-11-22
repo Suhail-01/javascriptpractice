@@ -1373,11 +1373,26 @@
 
 // dataset (Custom HTML Data Attributes)
 // This allows you to store hidden extra info inside HTML elements.
-let btn = document.querySelector("#btn");
+// let btn = document.querySelector("#btn");
 
-btn.addEventListener("click", function () {
-  console.log(btn.dataset.color); // "blue"
-  console.log(btn.dataset.size);  // "large"
+// btn.addEventListener("click", function () {
+//   console.log(btn.dataset.color); // "blue"
+//   console.log(btn.dataset.size);  // "large"
 
-  btn.style.backgroundColor = btn.dataset.color;
+//   btn.style.backgroundColor = btn.dataset.color;
+// });
+
+
+
+
+
+
+
+
+// Find nearest parent element
+let btn = document.querySelector(".btn");
+
+btn.addEventListener("click", function (event) {
+  let parentCard = event.target.closest(".card");
+  parentCard.style.border = "2px solid red";
 });
