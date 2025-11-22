@@ -1361,3 +1361,23 @@
 // btn.style.color = "goldenrod";
 // let main = document.querySelector("main");
 // main.appendChild(btn);
+
+
+
+
+
+
+
+
+
+
+// dataset (Custom HTML Data Attributes)
+// This allows you to store hidden extra info inside HTML elements.
+let btn = document.querySelector("#btn");
+
+btn.addEventListener("click", function () {
+  console.log(btn.dataset.color); // "blue"
+  console.log(btn.dataset.size);  // "large"
+
+  btn.style.backgroundColor = btn.dataset.color;
+});
