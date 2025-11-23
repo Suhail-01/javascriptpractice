@@ -1474,31 +1474,71 @@
 
 
 // Project-01 with dom random paper generatore          
+// var btn = document.querySelector("button");
+// var main = document.querySelector("main");
+
+// btn.addEventListener("click", function () {
+//   var div = document.createElement("div");
+
+//   var x = Math.random() * 100;
+//   var y = Math.random() * 100;
+
+//   var c1 = Math.floor(Math.random() * 256);
+//   var c2 = Math.floor(Math.random() * 256);
+//   var c3 = Math.floor(Math.random() * 256);  // ❌ you had syntax error here
+
+//   div.style.width = "50px";
+//   div.style.height = "50px";
+//   div.style.position = "absolute";
+
+//   // random position
+//   div.style.left = x + "%";
+//   div.style.top = y + "%";
+
+//   // random color
+//   div.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+
+//   div.style.margin = "5px";
+
+//   main.appendChild(div);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Project-02 with dom random names generator with rotation generator
 var btn = document.querySelector("button");
 var main = document.querySelector("main");
-
 btn.addEventListener("click", function () {
-  var div = document.createElement("div");
-
-  var x = Math.random() * 100;
-  var y = Math.random() * 100;
-
-  var c1 = Math.floor(Math.random() * 256);
-  var c2 = Math.floor(Math.random() * 256);
-  var c3 = Math.floor(Math.random() * 256);  // ❌ you had syntax error here
-
-  div.style.width = "50px";
-  div.style.height = "50px";
-  div.style.position = "absolute";
-
-  // random position
-  div.style.left = x + "%";
-  div.style.top = y + "%";
-
-  // random color
-  div.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
-
-  div.style.margin = "5px";
-
-  main.appendChild(div);
-});
+  var h1 = document.createElement("h1");
+  var names = ["Suhail", "Kiran", "Akii", "Hysrb", "Gst", "Gt", "Vstsuw"];
+  var a = Math.floor(Math.random() * names.length);
+  var x = Math.random() *100;
+  var y = Math.random() *100; 
+  var r = Math.floor(Math.random() * 360);
+  var sle = Math.floor(Math.random()*4);
+  h1.innerHTML = names[a];
+  h1.style.position = "absolute";
+  h1.style.left = x + "%";
+ h1.style.top = y + "%";
+ h1.style.scale = sle;
+ h1.style.transform = `rotate(${r}deg)`;
+  main.appendChild(h1);
+})
+  
