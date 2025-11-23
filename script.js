@@ -1452,14 +1452,53 @@
 // let oldPara = document.getElementById("old");
 // let btn = document.getElementById("update");
 
+// btn.addEventListener("click", function () {
+//   // 1. Create new p element
+//   let newPara = document.createElement("p");
+//   newPara.textContent = "This is NEW updated text";
+
+//   // 2. Replace old <p> with new <p>
+//   container.replaceChild(newPara, oldPara);
+
+//   // 3. (Optional) Update oldPara variable if you want further changes
+//   oldPara = newPara;
+// });
+
+
+
+
+
+
+
+
+
+
+// Project-01 with dom random paper generatore          
+var btn = document.querySelector("button");
+var main = document.querySelector("main");
+
 btn.addEventListener("click", function () {
-  // 1. Create new p element
-  let newPara = document.createElement("p");
-  newPara.textContent = "This is NEW updated text";
+  var div = document.createElement("div");
 
-  // 2. Replace old <p> with new <p>
-  container.replaceChild(newPara, oldPara);
+  var x = Math.random() * 100;
+  var y = Math.random() * 100;
 
-  // 3. (Optional) Update oldPara variable if you want further changes
-  oldPara = newPara;
+  var c1 = Math.floor(Math.random() * 256);
+  var c2 = Math.floor(Math.random() * 256);
+  var c3 = Math.floor(Math.random() * 256);  // ❌ you had syntax error here
+
+  div.style.width = "50px";
+  div.style.height = "50px";
+  div.style.position = "absolute";
+
+  // random position
+  div.style.left = x + "%";
+  div.style.top = y + "%";
+
+  // random color
+  div.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+
+  div.style.margin = "5px";
+
+  main.appendChild(div);
 });
