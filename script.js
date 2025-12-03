@@ -1523,22 +1523,72 @@
 
 
 // Project-02 with dom random names generator with rotation generator
-var btn = document.querySelector("button");
-var main = document.querySelector("main");
-btn.addEventListener("click", function () {
-  var h1 = document.createElement("h1");
-  var names = ["Suhail", "Kiran", "Akii", "Hysrb", "Gst", "Gt", "Vstsuw"];
-  var a = Math.floor(Math.random() * names.length);
-  var x = Math.random() *100;
-  var y = Math.random() *100; 
-  var r = Math.floor(Math.random() * 360);
-  var sle = Math.floor(Math.random()*4);
-  h1.innerHTML = names[a];
-  h1.style.position = "absolute";
-  h1.style.left = x + "%";
- h1.style.top = y + "%";
- h1.style.scale = sle;
- h1.style.transform = `rotate(${r}deg)`;
-  main.appendChild(h1);
-})
+// var btn = document.querySelector("button");
+// var main = document.querySelector("main");
+// btn.addEventListener("click", function () {
+//   var h1 = document.createElement("h1");
+//   var names = ["Suhail", "Kiran", "Akii", "Hysrb", "Gst", "Gt", "Vstsuw"];
+//   var a = Math.floor(Math.random() * names.length);
+//   var x = Math.random() *100;
+//   var y = Math.random() *100; 
+//   var r = Math.floor(Math.random() * 360);
+//   var sle = Math.floor(Math.random()*4);
+//   h1.innerHTML = names[a];
+//   h1.style.position = "absolute";
+//   h1.style.left = x + "%";
+//  h1.style.top = y + "%";
+//  h1.style.scale = sle;
+//  h1.style.transform = `rotate(${r}deg)`;
+//   main.appendChild(h1);
+// })
   
+
+
+
+
+
+// promisePool(limit, tasks)
+// tasks: array of functions that return a Promise
+async function promisePool(limit, tasks) {
+  const results = new Array(tasks.length);
+  let i = 0;
+
+  // worker: picks next task index and runs it
+  async function worker() {
+    while (true) {
+      const idx = i++;
+      if (idx >= tasks.length) return;
+      try {
+        results[idx] = await tasks[idx]();
+      } catch (err) {
+        results[idx] = { __error: true, error: err };
+      }
+    }
+  }
+
+  // start `limit` workers (but not more than tasks length)
+  const workers = Array(Math.min(limit, tasks.length)).fill(null).map(worker);
+  await Promise.all(workers);
+  return results;
+}
+
+// --- Demo usage ---
+function delay(ms, value) {
+  return new Promise(res => setTimeout(() => res(value), ms));
+}
+
+const tasks = [
+  () => delay(900, 'A'),
+  () => delay(300, 'B'),
+  () => delay(600, 'C'),
+  () => delay(100, 'D'),
+  () => Promise.reject(new Error('Task failed')), // shows error handling
+  () => delay(200, 'E'),
+];
+
+(async () => {
+  console.time('pool');
+  const out = await promisePool(2, tasks);
+  console.timeEnd('pool');
+  console.log(out);
+})();
