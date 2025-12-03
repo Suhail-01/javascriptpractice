@@ -1545,75 +1545,94 @@
 
 
 
+function createAsyncMemo(fetcher, { maxSize = 100, ttl = 60_000 } = {}) {
+  // Map key -> { value, expiresAt, promise }
+  const cache = new Map();
 
-// createReactive(obj, schema)
-// schema: { propName: validatorFn(value): boolean or throws }
-function createReactive(obj, schema = {}) {
-  const subs = new Set();
+  function touch(key) {
+    // move key to end (most recently used)
+    const v = cache.get(key);
+    cache.delete(key);
+    cache.set(key, v);
+  }
 
-  const handler = {
-    get(target, prop, receiver) {
-      // allow subscribe/unsubscribe via special symbol
-      if (prop === reactiveAPI.subscribe) return (fn) => subs.add(fn);
-      if (prop === reactiveAPI.unsubscribe) return (fn) => subs.delete(fn);
-      return Reflect.get(target, prop, receiver);
-    },
-
-    set(target, prop, value, receiver) {
-      const validator = schema[prop];
-      if (validator) {
-        const ok = validator(value);
-        if (!ok) throw new TypeError(`Validation failed for "${String(prop)}": ${value}`);
-      }
-      const old = target[prop];
-      const result = Reflect.set(target, prop, value, receiver);
-      if (old !== value) {
-        for (const fn of subs) {
-          try { fn(prop, value, old); }
-          catch (e) { console.error('subscriber error', e); }
-        }
-      }
-      return result;
-    },
-
-    deleteProperty(target, prop) {
-      const had = prop in target;
-      const result = Reflect.deleteProperty(target, prop);
-      if (had) {
-        for (const fn of subs) fn(prop, undefined, undefined);
-      }
-      return result;
+  function evictIfNeeded() {
+    while (cache.size > maxSize) {
+      // remove least-recently-used (Map iterator gives oldest first)
+      const oldestKey = cache.keys().next().value;
+      cache.delete(oldestKey);
     }
-  };
+  }
 
-  const proxy = new Proxy(Object.assign({}, obj), handler);
-  return proxy;
+  return async function memoized(key, ...args) {
+    const entry = cache.get(key);
+    const now = Date.now();
+
+    if (entry) {
+      // still valid value
+      if (entry.value !== undefined && entry.expiresAt > now) {
+        touch(key);
+        return entry.value;
+      }
+      // in-flight promise exists -> reuse it
+      if (entry.promise) {
+        return entry.promise;
+      }
+    }
+
+    // create a promise and store it immediately to dedupe concurrent callers
+    let resolveWrapper, rejectWrapper;
+    const p = new Promise((res, rej) => { resolveWrapper = res; rejectWrapper = rej; });
+
+    cache.set(key, { promise: p, value: undefined, expiresAt: 0 });
+    evictIfNeeded();
+
+    // execute fetcher
+    (async () => {
+      try {
+        const result = await fetcher(key, ...args);
+        const expiresAt = Date.now() + ttl;
+        // replace entry with stored value (remove promise)
+        cache.set(key, { promise: null, value: result, expiresAt });
+        touch(key);
+        evictIfNeeded();
+        resolveWrapper(result);
+      } catch (err) {
+        // remove entry entirely on error (so future attempts can retry)
+        cache.delete(key);
+        rejectWrapper(err);
+      }
+    })();
+
+    return p;
+  };
 }
-const reactiveAPI = {
-  subscribe: Symbol('subscribe'),
-  unsubscribe: Symbol('unsubscribe'),
-};
 
 // --- Demo usage ---
-const person = createReactive(
-  { name: 'Alice', age: 30 },
-  {
-    name: v => typeof v === 'string' && v.length > 0,
-    age: v => Number.isInteger(v) && v >= 0 && v <= 130
-  }
-);
 
-// subscribe
-person[reactiveAPI.subscribe]((prop, value, old) => {
-  console.log(`changed ${prop}: ${old} -> ${value}`);
-});
-
-console.log('initial:', person.name, person.age);
-person.name = 'Bob';      // OK
-try {
-  person.age = -5;       // throws validation error
-} catch (e) {
-  console.log('caught:', e.message);
+// fake async fetcher that returns key + timestamp after a delay
+async function fakeFetch(key) {
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  await delay(200); // simulate network latency
+  return { key, ts: Date.now() };
 }
-person.age = 35;         // OK
-delete person.name;      // triggers subscriber with undefined
+
+(async () => {
+  const memo = createAsyncMemo(fakeFetch, { maxSize: 2, ttl: 1000 });
+
+  // two parallel callers for same key should share same promise
+  const [a, b] = await Promise.all([memo('x'), memo('x')]);
+  console.log('a.ts === b.ts ?', a.ts === b.ts); // true
+
+  // after TTL expires, new fetch occurs
+  await new Promise(r => setTimeout(r, 1100));
+  const c = await memo('x');
+  console.log('a.ts === c.ts ?', a.ts === c.ts); // likely false
+
+  // LRU eviction: add keys until eviction
+  await memo('k1'); // cached
+  await memo('k2'); // cached
+  await memo('k3'); // adding k3 with maxSize = 2 evicts oldest
+  console.log('contains k1?', !!(await Promise.resolve().then(() => { /* inspect */ }))); // illustrative
+  console.log('demo done');
+})();
