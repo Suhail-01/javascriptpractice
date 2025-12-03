@@ -1615,75 +1615,48 @@ function createAsyncMemo(fetcher, { maxSize = 100, ttl = 60_000 } = {}) {
 
 
 
-// createReactive(obj, schema)
-// schema: { propName: validatorFn(value): boolean or throws }
-function createReactive(obj, schema = {}) {
-  const subs = new Set();
+// promisePool(limit, tasks)
+// tasks: array of functions that return a Promise
+async function promisePool(limit, tasks) {
+  const results = new Array(tasks.length);
+  let i = 0;
 
-  const handler = {
-    get(target, prop, receiver) {
-      // allow subscribe/unsubscribe via special symbol
-      if (prop === reactiveAPI.subscribe) return (fn) => subs.add(fn);
-      if (prop === reactiveAPI.unsubscribe) return (fn) => subs.delete(fn);
-      return Reflect.get(target, prop, receiver);
-    },
-
-    set(target, prop, value, receiver) {
-      const validator = schema[prop];
-      if (validator) {
-        const ok = validator(value);
-        if (!ok) throw new TypeError(`Validation failed for "${String(prop)}": ${value}`);
+  // worker: picks next task index and runs it
+  async function worker() {
+    while (true) {
+      const idx = i++;
+      if (idx >= tasks.length) return;
+      try {
+        results[idx] = await tasks[idx]();
+      } catch (err) {
+        results[idx] = { __error: true, error: err };
       }
-      const old = target[prop];
-      const result = Reflect.set(target, prop, value, receiver);
-      if (old !== value) {
-        for (const fn of subs) {
-          try { fn(prop, value, old); }
-          catch (e) { console.error('subscriber error', e); }
-        }
-      }
-      return result;
-    },
-
-    deleteProperty(target, prop) {
-      const had = prop in target;
-      const result = Reflect.deleteProperty(target, prop);
-      if (had) {
-        for (const fn of subs) fn(prop, undefined, undefined);
-      }
-      return result;
     }
-  };
+  }
 
-  const proxy = new Proxy(Object.assign({}, obj), handler);
-  return proxy;
+  // start `limit` workers (but not more than tasks length)
+  const workers = Array(Math.min(limit, tasks.length)).fill(null).map(worker);
+  await Promise.all(workers);
+  return results;
 }
-const reactiveAPI = {
-  subscribe: Symbol('subscribe'),
-  unsubscribe: Symbol('unsubscribe'),
-};
 
 // --- Demo usage ---
-const person = createReactive(
-  { name: 'Alice', age: 30 },
-  {
-    name: v => typeof v === 'string' && v.length > 0,
-    age: v => Number.isInteger(v) && v >= 0 && v <= 130
-  }
-);
-
-// subscribe
-person[reactiveAPI.subscribe]((prop, value, old) => {
-  console.log(`changed ${prop}: ${old} -> ${value}`);
-});
-
-console.log('initial:', person.name, person.age);
-person.name = 'Bob';      // OK
-try {
-  person.age = -5;       // throws validation error
-} catch (e) {
-  console.log('caught:', e.message);
+function delay(ms, value) {
+  return new Promise(res => setTimeout(() => res(value), ms));
 }
-person.age = 35;         // OK
-delete person.name;      // triggers subscriber with undefined
 
+const tasks = [
+  () => delay(900, 'A'),
+  () => delay(300, 'B'),
+  () => delay(600, 'C'),
+  () => delay(100, 'D'),
+  () => Promise.reject(new Error('Task failed')), // shows error handling
+  () => delay(200, 'E'),
+];
+
+(async () => {
+  console.time('pool');
+  const out = await promisePool(2, tasks);
+  console.timeEnd('pool');
+  console.log(out);
+})();
