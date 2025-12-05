@@ -1546,19 +1546,41 @@
 
 
 
-function fibonacci(n) {
-  let a = 0;
-  let b = 1;
 
-  console.log(a); 
-  if (n > 1) console.log(b);
+// febonacci number  
+// function fibonacci(n) {
+//   let a = 0;
+//   let b = 1;
+
+//   console.log(a); 
+//   if (n > 1) console.log(b);
+
+//   for (let i = 2; i < n; i++) {
+//     let next = a + b;
+//     console.log(next);
+//     a = b;
+//     b = next;
+//   }
+// }
+
+// fibonacci(10);   // prints first 10 Fibonacci numbers
+
+
+
+
+
+
+
+
+// febonaccci number with different method
+function getFibonacci(n) {
+  let fib = [0, 1];
 
   for (let i = 2; i < n; i++) {
-    let next = a + b;
-    console.log(next);
-    a = b;
-    b = next;
+    fib[i] = fib[i - 1] + fib[i - 2];
   }
+
+  return fib;
 }
 
-fibonacci(10);   // prints first 10 Fibonacci numbers
+console.log(getFibonacci(10));
