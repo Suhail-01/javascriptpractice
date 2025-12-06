@@ -1570,17 +1570,14 @@
 
 
 
-
-
-// febonaccci number with different method
-function getFibonacci(n) {
-  let fib = [0, 1];
-
-  for (let i = 2; i < n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-  }
-
-  return fib;
+// Advanced js
+let user = {
+    name:"name",
+    age:11,
+    email:"kkkkkkkks",
+};
+let user2 = {
+    name:"name",
+    age:11,
+    email:"kkkkkkkks",
 }
-
-console.log(getFibonacci(10));
