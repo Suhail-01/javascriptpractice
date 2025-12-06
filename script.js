@@ -1571,13 +1571,23 @@
 
 
 // Advanced js
-let user = {
-    name:"name",
-    age:11,
-    email:"kkkkkkkks",
-};
-let user2 = {
-    name:"name",
-    age:11,
-    email:"kkkkkkkks",
-}
+// 1) objects
+
+
+// let user = {
+//     name:"name",
+//     age:11,
+//     email:"kkkkkkkks",
+// };
+// let user2 = {
+//     name:"name",
+//     age:11,
+//     email:"kkkkkkkks",
+// }
+
+
+
+
+
+
+// classes
