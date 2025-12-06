@@ -1591,3 +1591,10 @@
 
 
 // classes
+class BiscuitMaker{
+    constructor(){
+        this.name = "parleG"
+        this.price = 5;
+    }
+}
+let biscuit = new BiscuitMaker();
