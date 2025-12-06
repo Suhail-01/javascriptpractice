@@ -1591,10 +1591,26 @@
 
 
 // classes
-class BiscuitMaker{
+// class BiscuitMaker{
+//     constructor(){
+//         this.name = "parleG"
+//         this.price = 5;
+//     }
+// }
+// let biscuit = new BiscuitMaker();
+
+
+
+class allochat{
     constructor(){
-        this.name = "parleG"
-        this.price = 5;
+     this.price = 55;
+    this.brand = "bharat";
+    this.date = 22,33,2025;
+    }
+
+    aalobhrta(){
+        console.log("packed hoagaya bhai lelo aur paise scann krdo");
+        
     }
 }
-let biscuit = new BiscuitMaker();
+let aalo =  new allochat();
