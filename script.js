@@ -1613,4 +1613,4 @@ class allochat{
         
     }
 }
-let aalo =  new allochat();
+let aalo =   new allochat();
