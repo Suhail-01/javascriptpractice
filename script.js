@@ -1621,16 +1621,27 @@
 
 
 
-class human{
-    constructor(){
-        this.name = "abavc";
-        this.age = 99;
-    }
-    saanslo(){
-        console.log("no way");
+// class human{
+//     constructor(){
+//         this.name = "abavc";
+//         this.age = 99;
+//     }
+//     saanslo(){
+//         console.log("no way");
         
-    }
-    paanipiuoo(){console.log("no way");}
+//     }
+//     paanipiuoo(){console.log("no way");}
+// }
+// let h1 = new human()
+// let h2 = new human()
+
+
+
+
+let animal = class animal{
+     constructor(){
+        this.name = "gogg"
+        this.age = 33;
+     }
 }
-let h1 = new human()
-let h2 = new human()
+let nh = new animal()
