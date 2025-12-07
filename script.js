@@ -1648,7 +1648,7 @@ class Animal{
     }
     susu(){};
 }
-let an1 = Animal();
+// let an1 = Animal();
 
 class kekda extends Animal{
     constructor(){
