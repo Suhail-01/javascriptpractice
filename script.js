@@ -1601,16 +1601,37 @@
 
 
 
-class allochat{
-    constructor(){
-     this.price = 55;
-    this.brand = "bharat";
-    this.date = 22,33,2025;
-    }
 
-    aalobhrta(){
-        console.log("packed hoagaya bhai lelo aur paise scann krdo");
+
+// example 2
+// class allochat{
+//     constructor(){
+//      this.price = 55;
+//     this.brand = "bharat";
+//     this.date = 22,33,2025;
+//     }
+
+//     aalobhrta(){
+//         console.log("packed hoagaya bhai lelo aur paise scann krdo");
         
+//     }
+// }
+// let aalo =   new allochat();
+
+
+
+
+class kitab{
+    constructor(name,price,author,color){
+        this.name = name;
+        this.price = price;
+        this.author = author;
+        this.color = color;
     }
+    pnna(){}
+    marker(){}
+    padhlo(){}
 }
-let aalo =   new allochat();
+let k1 = new kitab("moral",222, "hhaa", "black" )
+let k1 = new kitab("kkral",2333, "h555", "laal" )
+let k2 = new kitab(let k1 = new kitab("moral",222, "hhaa", "black" )
