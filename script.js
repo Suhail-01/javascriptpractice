@@ -1638,10 +1638,23 @@
 
 
 
-let animal = class animal{
-     constructor(){
-        this.name = "gogg"
-        this.age = 33;
-     }
+
+
+// inheritance
+class Animal{
+    constructor(){
+        this.name = "kutra";
+        this.age= 33
+    }
+    susu(){};
 }
-let nh = new animal()
+let an1 = Animal();
+
+class kekda extends Animal{
+    constructor(){
+        this.legs = 3;
+        this.hands = 5;
+    }
+    poti(){}
+}
+let an2 = kekda();
