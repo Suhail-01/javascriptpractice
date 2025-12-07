@@ -1621,17 +1621,16 @@
 
 
 
-class kitab{
-    constructor(name,price,author,color){
-        this.name = name;
-        this.price = price;
-        this.author = author;
-        this.color = color;
+class human{
+    constructor(){
+        this.name = "abavc";
+        this.age = 99;
     }
-    pnna(){}
-    marker(){}
-    padhlo(){}
+    saanslo(){
+        console.log("no way");
+        
+    }
+    paanipiuoo(){console.log("no way");}
 }
-let k1 = new kitab("moral",222, "hhaa", "black" )
-let k1 = new kitab("kkral",2333, "h555", "laal" )
-let k2 = new kitab(let k1 = new kitab("moral",222, "hhaa", "black" )
+let h1 = new human()
+let h2 = new human()
