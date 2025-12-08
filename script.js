@@ -1692,19 +1692,39 @@
 
 
 // another example of getter and setter
-let student = {
-  marks: 80,
+// let student = {
+//   marks: 80,
 
-  get grade() {
-    return this.marks >= 35 ? "Pass" : "Fail";
-  },
+//   get grade() {
+//     return this.marks >= 35 ? "Pass" : "Fail";
+//   },
 
-  set updateMarks(newMarks) {
-    this.marks = newMarks;
-  }
-};
+//   set updateMarks(newMarks) {
+//     this.marks = newMarks;
+//   }
+// };
 
-console.log(student.grade); // Pass (getter checks value)
+// console.log(student.grade); // Pass (getter checks value)
 
-student.updateMarks = 20;   // setter updates value
-console.log(student.grade); // Fail
+// student.updateMarks = 20;   // setter updates value
+// console.log(student.grade); // Fail
+
+
+
+let users = {
+    name: "suhail",
+    email: " aaaaaaaa",
+    login:function(){
+        console.log();
+    }
+}
+users.login();
+let users1 = {
+    name: "suhail",
+    email: " aaaaaaaa",
+    login:function(){
+        console.log();
+    }
+}
+users.login();
+
