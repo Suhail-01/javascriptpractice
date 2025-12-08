@@ -1728,3 +1728,34 @@ let users1 = {
 }
 users.login();
 
+users.login();
+let users2 = {
+    name: "suhail",
+    email: " aaaaaaaa",
+    login:function(){
+        console.log();
+    }
+}
+users.login();
+
+
+users.login();
+let users3 = {
+    name: "suhail",
+    email: " aaaaaaaa",
+    login:function(){
+        console.log();
+    }
+}
+users.login();
+
+users.login();
+let users4 = {
+    name: "suhail",
+    email: " aaaaaaaa",
+    login:function(){
+        console.log();
+    }
+}
+users.login();
+
