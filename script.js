@@ -1641,20 +1641,37 @@
 
 
 // inheritance
-class Animal{
-    constructor(){
-        this.name = "kutra";
-        this.age= 33
-    }
-    susu(){};
-}
-// let an1 = Animal();
+// class Animal{
+//     constructor(){
+//         this.name = "kutra";
+//         this.age= 33
+//     }
+//     susu(){};
+// }
+// // let an1 = Animal();
 
-class kekda extends Animal{
-    constructor(){
-        this.legs = 3;
-        this.hands = 5;
+// class kekda extends Animal{
+//     constructor(){
+//         this.legs = 3;
+//         this.hands = 5;
+//     }
+//     poti(){}
+// }
+// let an2 = kekda();
+
+
+
+let person = {
+    fname:  "suhail",
+    lname: "sayyed",
+    get fullname(){
+        return this.fname + " " + this.lname;
+    },
+    set fullname(value){
+        let parts = value.split(" ");
+        this.fname = parts[0]
+        this.lname = parts[1]
     }
-    poti(){}
-}
-let an2 = kekda();
+};
+console.log(person.fullname);
+
