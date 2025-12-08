@@ -1664,17 +1664,47 @@
 
 
 
-let person = {
-    fname:  "suhail",
-    lname: "sayyed",
-    get fullname(){
-        return this.fname + " " + this.lname;
-    },
-    set fullname(value){
-        let parts = value.split(" ");
-        this.fname = parts[0]
-        this.lname = parts[1]
-    }
-};
-console.log(person.fullname);
 
+
+
+// getter and setter
+
+
+// let person = {
+//     fname:  "suhail",
+//     lname: "sayyed",
+//     get fullname(){
+//         return this.fname + " " + this.lname;
+//     },
+//     set fullname(value){
+//         let parts = value.split(" ");
+//         this.fname = parts[0]
+//         this.lname = parts[1]
+//     }
+// };
+// console.log(person.fullname);
+
+
+
+
+
+
+
+
+// another example of getter and setter
+let student = {
+  marks: 80,
+
+  get grade() {
+    return this.marks >= 35 ? "Pass" : "Fail";
+  },
+
+  set updateMarks(newMarks) {
+    this.marks = newMarks;
+  }
+};
+
+console.log(student.grade); // Pass (getter checks value)
+
+student.updateMarks = 20;   // setter updates value
+console.log(student.grade); // Fail
