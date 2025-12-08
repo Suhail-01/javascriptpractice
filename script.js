@@ -1711,51 +1711,18 @@
 
 
 
-let users = {
-    name: "suhail",
-    email: " aaaaaaaa",
-    login:function(){
-        console.log();
-    }
-}
-users.login();
-let users1 = {
-    name: "suhail",
-    email: " aaaaaaaa",
-    login:function(){
-        console.log();
-    }
-}
-users.login();
-
-users.login();
-let users2 = {
-    name: "suhail",
-    email: " aaaaaaaa",
-    login:function(){
-        console.log();
-    }
-}
-users.login();
 
 
-users.login();
-let users3 = {
-    name: "suhail",
-    email: " aaaaaaaa",
-    login:function(){
-        console.log();
+class user {
+    constructor(name , email){
+        this.name = name;
+        this.email = email;
+    }
+    loggedIn(){
+        console.log("loggedIn");   
     }
 }
-users.login();
-
-users.login();
-let users4 = {
-    name: "suhail",
-    email: " aaaaaaaa",
-    login:function(){
-        console.log();
-    }
-}
-users.login();
-
+let user1 = new user("myname", "h@h.in")
+let user2 = new user("myname", "h@h.in")
+let user3 = new user("myname", "h@h.in")
+let user4 = new user("myname", "h@h.in")
