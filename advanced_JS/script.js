@@ -28,14 +28,30 @@
 
 
 // 3
-class student{
-    constructor(name,rollnumer){
-        this.name = name;
-        this.rollnumer = rollnumer;
-    }
-    introduce(){
-        console.log(this.name + "-" + this.rollnumer);
+// class student{
+//     constructor(name,rollnumer){
+//         this.name = name;
+//         this.rollnumer = rollnumer;
+//     }
+//     introduce(){
+//         console.log(this.name + "-" + this.rollnumer);
+        
+//     }
+// }
+// let st1 = new student("harsh", 21);
+
+
+
+
+// 4
+let obj = {
+    sayname: function () {
+        console.log(this);
+    },
+    sayarrwoname:()=>{
+        console.log(this);
         
     }
 }
-let st1 = new student("harsh", 21);
+obj.sayarrwoname();
+obj.sayname();
