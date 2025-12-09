@@ -1,3 +1,4 @@
 git restore --staged script.js
 git add script.js
 git commit -m "updated some logic and new code as well"
+git push

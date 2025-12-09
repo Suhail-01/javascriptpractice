@@ -1715,16 +1715,16 @@
 
 
 // Create a user story that stores name and email and has a login method which prints user login with help by user make it using in class and constructor approach
-class user{
-    constructor(name , email){
-        this.name = name;
-        this.email = email;
-    }
-    loggedIn(){
-        console.log("loggedIn");   
-    }
-}
-let user1 = new user("myname","h@h.in")
-let user2 = new user("myname","h@h.in")
-let user3 = new user("myname","h@h.in")
-let user4 = new user("myname","h@h.in")
+// class user{
+//     constructor(name , email){
+//         this.name = name;
+//         this.email = email;
+//     }
+//     loggedIn(){
+//         console.log("loggedIn");   
+//     }
+// }
+// let user1 = new user("myname","h@h.in")
+// let user2 = new user("myname","h@h.in")
+// let user3 = new user("myname","h@h.in")
+// let user4 = new user("myname","h@h.in")

@@ -1,2 +1,6 @@
+git remote -v
+git push origin main
+
+
 git commit -m "updated some logic and new code as well"
 git push
