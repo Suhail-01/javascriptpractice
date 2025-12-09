@@ -14,13 +14,28 @@
 
 
 // 2
-class car{
-    constructor(brand,speed){
-        this.brand = brand;
-        this.speed = speed;
+// class car{
+//     constructor(brand,speed){
+//         this.brand = brand;
+//         this.speed = speed;
+//     }
+//     drive(){
+//         return this.brand + " - " + this.speed;
+//     }
+// }
+// let car1 = new car("audi", 200)
+
+
+
+// 3
+class student{
+    constructor(name,rollnumer){
+        this.name = name;
+        this.rollnumer = rollnumer;
     }
-    drive(){
-        return this.brand + " - " + this.speed;
+    introduce(){
+        console.log(this.name + "-" + this.rollnumer);
+        
     }
 }
-let car1 = new car("audi", 200)
+let st1 = new student("harsh", 21);
