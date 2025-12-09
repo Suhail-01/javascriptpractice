@@ -1,6 +1,19 @@
-git remote -v
+1. Check what changed (optional but useful)
+git status
+
+2. Stage all changes
+git add -A
+
+3. Commit your work
+git commit -m "your message here"
+
+4. Push to GitHub
 git push origin main
 
+🔁 Full workflow in one block
 
-git commit -m "updated some logic and new code as well"
-git push
+Use this after every set of changes:
+
+git add -A
+git commit -m "updated code"
+git push origin main
