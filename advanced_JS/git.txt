@@ -1,0 +1,2 @@
+git commit -m "updated some logic and new code as well"
+git push
