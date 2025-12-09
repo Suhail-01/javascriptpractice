@@ -44,14 +44,27 @@
 
 
 // 4
-let obj = {
-    sayname: function () {
-        console.log(this);
-    },
-    sayarrwoname:()=>{
-        console.log(this);
+// let obj = {
+//     sayname: function () {
+//         console.log(this);
+//     },
+//     sayarrwoname:()=>{
+//         console.log(this);
         
-    }
+//     }
+// }
+// obj.sayarrwoname();
+// obj.sayname();
+
+
+
+
+
+// 5
+function abcd() {
+    console.log(this.name);
 }
-obj.sayarrwoname();
-obj.sayname();
+let obj = {
+    name:"dddd"
+}
+abcd.call(obj)
