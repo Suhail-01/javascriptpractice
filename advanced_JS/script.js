@@ -81,12 +81,39 @@
 // })
 
 
-function chaloge(username, cb) {
+// function chaloge(username, cb) {
+//     setTimeout(() => {
+//         cb({ username, age: 22, email: "jsjshsshsj" });
+//     }, 2000);
+// }
+
+// chaloge("sss", function (data) {
+//     console.log(data);
+// });
+
+
+
+
+
+function name(username, cb) {
+    console.log("fetching all data......");
     setTimeout(() => {
-        cb({ username, age: 22, email: "jsjshsshsj" });
+        cb({ _id: 2222, username, age: 22, email: "sjsjhshhsh" });
     }, 2000);
 }
 
-chaloge("sss", function (data) {
-    console.log(data);
+function name22(id, cb) {
+    console.log("fetching all posts......");
+    setTimeout(() => {
+        cb({ _id: id, posts: {} });
+    }, 2000);
+}
+
+// Example usage:
+name("john_doe", function (userData) {
+    console.log("User Data:", userData);
+
+    name22(userData._id, function (postData) {
+        console.log("Post Data:", postData);
+    });
 });
