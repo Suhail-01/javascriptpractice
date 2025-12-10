@@ -73,9 +73,20 @@
 
 
 
-function chalunga(fnc) {
-    setTimeout(fnc,Math.floor(Math.random()*10)*1000);
+// function chalunga(fnc) {
+//     setTimeout(fnc,Math.floor(Math.random()*10)*1000);
+// }
+// chalunga(function() {
+//     console.log("hey");
+// })
+
+
+function chaloge(username, cb) {
+    setTimeout(() => {
+        cb({ username, age: 22, email: "jsjshsshsj" });
+    }, 2000);
 }
-chalunga(function() {
-    console.log("hey");
-})
+
+chaloge("sss", function (data) {
+    console.log(data);
+});
