@@ -95,25 +95,109 @@
 
 
 
-function name(username, cb) {
-    console.log("fetching all data......");
+// function name(username, cb) {
+//     console.log("fetching all data......");
+//     setTimeout(() => {
+//         cb({ _id: 2222, username, age: 22, email: "sjsjhshhsh" });
+//     }, 2000);
+// }
+
+// function name22(id, cb) {
+//     console.log("fetching all posts......");
+//     setTimeout(() => {
+//         cb({ _id: id, posts: {} });
+//     }, 2000);
+// }
+
+// // Example usage:
+// name("john_doe", function (userData) {
+//     console.log("User Data:", userData);
+
+//     name22(userData._id, function (postData) {
+//         console.log("Post Data:", postData);
+//     });
+// });
+
+
+
+
+
+
+
+
+
+
+function fetchUser(username, cb) {
+    console.log("fetching user...");
     setTimeout(() => {
         cb({ _id: 2222, username, age: 22, email: "sjsjhshhsh" });
-    }, 2000);
+    }, 800);
 }
 
-function name22(id, cb) {
-    console.log("fetching all posts......");
+function fetchPosts(userId, cb) {
+    console.log("fetching posts for user:", userId);
     setTimeout(() => {
-        cb({ _id: id, posts: {} });
-    }, 2000);
+        cb([{ id: 1, title: "First post" }, { id: 2, title: "Second post" }]);
+    }, 700);
 }
 
-// Example usage:
-name("john_doe", function (userData) {
-    console.log("User Data:", userData);
+function fetchPostDetails(postId, cb) {
+    console.log("fetching details for post:", postId);
+    setTimeout(() => {
+        cb({ id: postId, content: "This is the content of post " + postId, likes: 10 });
+    }, 600);
+}
 
-    name22(userData._id, function (postData) {
-        console.log("Post Data:", postData);
+function fetchComments(postId, cb) {
+    console.log("fetching comments for post:", postId);
+    setTimeout(() => {
+        cb([{ commentId: "c1", text: "Nice!" }, { commentId: "c2", text: "Great read." }]);
+    }, 500);
+}
+
+function fetchCommentAuthor(commentId, cb) {
+    console.log("fetching author for comment:", commentId);
+    setTimeout(() => {
+        cb({ authorId: "a" + commentId, name: "Author_" + commentId });
+    }, 400);
+}
+
+function sendNotification(userEmail, message, cb) {
+    console.log("sending notification to:", userEmail);
+    setTimeout(() => {
+        cb({ success: true, to: userEmail, message });
+    }, 300);
+}
+
+// === CALLBACK HELL ===
+fetchUser("john_doe", function (user) {
+    console.log("USER:", user);
+
+    fetchPosts(user._id, function (posts) {
+        console.log("POSTS:", posts);
+
+        // take first post
+        fetchPostDetails(posts[0].id, function (postDetails) {
+            console.log("POST DETAILS:", postDetails);
+
+            fetchComments(postDetails.id, function (comments) {
+                console.log("COMMENTS:", comments);
+
+                // take first comment
+                fetchCommentAuthor(comments[0].commentId, function (author) {
+                    console.log("COMMENT AUTHOR:", author);
+
+                    const message = `Hi ${user.username}, someone (${author.name}) commented on your post "${posts[0].title}"`;
+                    sendNotification(user.email, message, function (result) {
+                        console.log("NOTIFICATION RESULT:", result);
+
+                        // more nesting if you want — for no good reason:
+                        setTimeout(() => {
+                            console.log("All done. Deeply nested callback hell complete.");
+                        }, 200);
+                    });
+                });
+            });
+        });
     });
 });
