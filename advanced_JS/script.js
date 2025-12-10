@@ -61,10 +61,21 @@
 
 
 // 5
-function abcd() {
-    console.log(this.name);
+// function abcd() {
+//     console.log(this.name);
+// }
+// let obj = {
+//     name:"dddd"
+// }
+// abcd.call(obj)
+
+
+
+
+
+function chalunga(fnc) {
+    setTimeout(fnc,Math.floor(Math.random()*10)*1000);
 }
-let obj = {
-    name:"dddd"
-}
-abcd.call(obj)
+chalunga(function() {
+    console.log("hey");
+})
