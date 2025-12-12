@@ -236,10 +236,19 @@
 
 
 
-function delayedLog(callback) {
-  setTimeout(() => {
-    callback("Delayed Hello!");
-  }, 1000);
+// function delayedLog(callback) {
+//   setTimeout(() => {
+//     callback("Delayed Hello!");
+//   }, 1000);
+// }
+
+// delayedLog(msg => console.log(msg));
+
+
+
+
+function double(n, callback) {
+  callback(n * 2);
 }
 
-delayedLog(msg => console.log(msg));
+double(5, result => console.log(result));
