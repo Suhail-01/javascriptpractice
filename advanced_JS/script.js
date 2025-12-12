@@ -263,12 +263,26 @@
 
 
 
-function sayHi() {
-  console.log("Hi!");
+// function sayHi() {
+//   console.log("Hi!");
+// }
+
+// function run(cb) {
+//   cb();
+// }
+
+// run(sayHi);
+
+
+
+
+function finish() {
+  console.log("Done!");
 }
 
-function run(cb) {
+function work(cb) {
+  console.log("Working...");
   cb();
 }
 
-run(sayHi);
+work(finish);
