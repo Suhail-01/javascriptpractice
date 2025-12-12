@@ -207,13 +207,21 @@
 
 
 
-function greet(name, callback) {
-  console.log("Hello " + name);
-  callback();
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function done() {
+//   console.log("Callback finished!");
+// }
+
+// greet("Alice", done);
+
+
+
+function doTask(cb) {
+  cb("Task done!");
 }
 
-function done() {
-  console.log("Callback finished!");
-}
-
-greet("Alice", done);
+doTask(message => console.log(message));
