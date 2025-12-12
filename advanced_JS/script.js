@@ -220,8 +220,26 @@
 
 
 
-function doTask(cb) {
-  cb("Task done!");
+// function doTask(cb) {
+//   cb("Task done!");
+// }
+
+// doTask(message => console.log(message));
+
+
+
+
+
+
+
+
+
+
+
+function delayedLog(callback) {
+  setTimeout(() => {
+    callback("Delayed Hello!");
+  }, 1000);
 }
 
-doTask(message => console.log(message));
+delayedLog(msg => console.log(msg));
