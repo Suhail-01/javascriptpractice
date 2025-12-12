@@ -256,6 +256,19 @@
 
 
 
-const nums = [1, 2, 3];
-const doubled = nums.map(x => x * 2);
-console.log(doubled);
+// const nums = [1, 2, 3];
+// const doubled = nums.map(x => x * 2);
+// console.log(doubled);
+
+
+
+
+function sayHi() {
+  console.log("Hi!");
+}
+
+function run(cb) {
+  cb();
+}
+
+run(sayHi);
