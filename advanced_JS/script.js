@@ -247,8 +247,15 @@
 
 
 
-function double(n, callback) {
-  callback(n * 2);
-}
+// function double(n, callback) {
+//   callback(n * 2);
+// }
 
-double(5, result => console.log(result));
+// double(5, result => console.log(result));
+
+
+
+
+const nums = [1, 2, 3];
+const doubled = nums.map(x => x * 2);
+console.log(doubled);
