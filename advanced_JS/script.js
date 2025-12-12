@@ -276,13 +276,23 @@
 
 
 
-function finish() {
-  console.log("Done!");
+// function finish() {
+//   console.log("Done!");
+// }
+
+// function work(cb) {
+//   console.log("Working...");
+//   cb();
+// }
+
+// work(finish);
+
+
+
+
+function compute(num, callback) {
+  const result = num * num;
+  callback(result);
 }
 
-function work(cb) {
-  console.log("Working...");
-  cb();
-}
-
-work(finish);
+compute(4, value => console.log(value));
