@@ -328,6 +328,18 @@
 
 
 
-setTimeout(function() {
-  console.log("This message appears after 2 seconds");
-}, 2000);
+// setTimeout(function () {
+//     console.log("thi is mess");
+    
+// })
+
+
+
+function calculate(a, b, callback) {
+  const result = a + b;
+  callback(result);
+}
+
+calculate(5, 3, function(result) {
+  console.log("Result is:", result);
+});
