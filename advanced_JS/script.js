@@ -300,13 +300,26 @@
 
 
 
-function greet(name, callback) {
-  console.log("Hello " + name);
-  callback();
-}
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
 
-function sayGoodbye() {
-  console.log("Goodbye!");
-}
+// function sayGoodbye() {
+//   console.log("Goodbye!");
+// }
 
-greet("Alice", sayGoodbye);
+// greet("Alice", sayGoodbye);
+
+
+
+
+
+
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(function(num) {
+  return num * 2;
+});
+
+console.log(doubled);
