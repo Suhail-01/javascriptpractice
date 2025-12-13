@@ -290,9 +290,23 @@
 
 
 
-function compute(num, callback) {
-  const result = num * num;
-  callback(result);
+// function compute(num, callback) {
+//   const result = num * num;
+//   callback(result);
+// }
+
+// compute(4, value => console.log(value));
+
+
+
+
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
 }
 
-compute(4, value => console.log(value));
+function sayGoodbye() {
+  console.log("Goodbye!");
+}
+
+greet("Alice", sayGoodbye);
