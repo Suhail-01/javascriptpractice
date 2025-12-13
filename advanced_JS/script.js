@@ -316,10 +316,18 @@
 
 
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
-const doubled = numbers.map(function(num) {
-  return num * 2;
-});
+// const doubled = numbers.map(function(num) {
+//   return num * 2;
+// });
 
-console.log(doubled);
+// console.log(doubled);
+
+
+
+
+
+setTimeout(function() {
+  console.log("This message appears after 2 seconds");
+}, 2000);
