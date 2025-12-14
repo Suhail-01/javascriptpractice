@@ -380,13 +380,38 @@
 
 
 // callback situation
-function amitpassjao(address , cb){
-  console.log("fetching the detailses.........");
+// function amitpassjao(address , cb){
+//   console.log("fetching the detailses.........");
   
+//   setTimeout(() => {
+//     cb({lat: 23.44, lng: 76.5});
+//   }, 3000);
+// }
+// amitpassjao("ashok nagar bengaal", function(det){
+//   console.log(det);
+// })
+
+
+
+
+
+
+// Create a function called getUserLocation that:
+// Takes two parameters
+// username
+// callback
+
+
+function getuserlocation(username,cb) {
+  console.log("locating user....");
   setTimeout(() => {
-    cb({lat: 23.44, lng: 76.5});
+    cb({  user: username,
+  lat: 12.9716,
+  lng: 77.5946})
   }, 3000);
+  
 }
-amitpassjao("ashok nagar bengaal", function(det){
-  console.log(det);
+getuserlocation("raju",function(dets){
+  console.log(dets);
+  
 })
