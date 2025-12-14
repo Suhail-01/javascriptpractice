@@ -381,6 +381,8 @@
 
 // callback situation
 function amitpassjao(address , cb){
+  console.log("fetching the detailses.........");
+  
   setTimeout(() => {
     cb({lat: 23.44, lng: 76.5});
   }, 3000);
