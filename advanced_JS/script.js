@@ -436,20 +436,60 @@
 
 
 
-function getUser(username, cb) {
+// function getUser(username, cb) {
+//   setTimeout(() => {
+//     cb({ id: 1, username: "ssoohh" });
+//   }, 1000);
+// }
+
+// function getUserPost(id, cb) {
+//   setTimeout(() => {
+//     cb(["hello", "good boy", "f*** you"]);
+//   }, 2000);
+// }
+
+// getUser("ssoohh", function (data) {
+//   getUserPost(data.id, function (allposts) {
+//     console.log(data.username, allposts);
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+// callback hell / cristhmass tree problem
+function loginUser(username, cb) {
+  console.log("logged in user...");
   setTimeout(() => {
-    cb({ id: 1, username: "ssoohh" });
+    cb({ id: 1122, username: username });
   }, 1000);
 }
 
-function getUserPost(id, cb) {
+function fetchPermissions(id, cb) {
+  console.log("fetching permissions...");
   setTimeout(() => {
-    cb(["hello", "good boy", "f*** you"]);
+    cb(["read", "write", "delete"]);
   }, 2000);
 }
 
-getUser("ssoohh", function (data) {
-  getUserPost(data.id, function (allposts) {
-    console.log(data.username, allposts);
+function loadDashboard(permissions, cb) {
+  console.log("loading dashboard...");
+  setTimeout(() => {
+    cb();
+  }, 2000);
+}
+
+loginUser("nameaagaya", function (userdata) {
+  fetchPermissions(userdata.id, function (permissions) {
+    loadDashboard(permissions, function () {
+      console.log("✅ dashboard loaded");
+    });
   });
 });
