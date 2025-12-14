@@ -421,13 +421,35 @@
 
 
 
-
-function afterdelayed(time,cb){
-  setTimeout(() => {
-    cb();
-  }, time);
-}
-afterdelayed(3000,function () {
-  console.log("callback executed...");
+// question 1 :- callback run after delayed
+// function afterdelayed(time,cb){
+//   setTimeout(() => {
+//     cb();
+//   }, time);
+// }
+// afterdelayed(3000,function () {
+//   console.log("callback executed...");
   
-})
+// })
+
+
+
+
+
+function getUser(username, cb) {
+  setTimeout(() => {
+    cb({ id: 1, username: "ssoohh" });
+  }, 1000);
+}
+
+function getUserPost(id, cb) {
+  setTimeout(() => {
+    cb(["hello", "good boy", "f*** you"]);
+  }, 2000);
+}
+
+getUser("ssoohh", function (data) {
+  getUserPost(data.id, function (allposts) {
+    console.log(data.username, allposts);
+  });
+});
