@@ -335,11 +335,32 @@
 
 
 
-function calculate(a, b, callback) {
-  const result = a + b;
-  callback(result);
+// function calculate(a, b, callback) {
+//   const result = a + b;
+//   callback(result);
+// }
+
+// calculate(5, 3, function(result) {
+//   console.log("Result is:", result);
+// });
+
+
+
+
+
+
+function abcd(fn) {
+  fn(function (fn3) {
+    fn3(function () {
+      // final callback
+    });
+  });
 }
 
-calculate(5, 3, function(result) {
-  console.log("Result is:", result);
+abcd(function (fn2) {
+  fn2(function (fn3) {
+    fn3(function (fn4) {
+      fn4();
+    });
+  });
 });
