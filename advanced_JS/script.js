@@ -349,18 +349,42 @@
 
 
 
-function abcd(fn) {
-  fn(function (fn3) {
-    fn3(function () {
-      // final callback
-    });
-  });
-}
 
-abcd(function (fn2) {
-  fn2(function (fn3) {
-    fn3(function (fn4) {
-      fn4();
-    });
-  });
-});
+
+
+
+
+// this is vimp to understand the callbacke make sure to practice it again
+// function abcd(fn) {
+//   fn(function (fn3) {
+//     fn3(function () {
+//       // final callback
+//     });
+//   });
+// }
+
+// abcd(function (fn2) {
+//   fn2(function (fn3) {
+//     fn3(function (fn4) {
+//       fn4();
+//     });
+//   });
+// });
+
+
+
+
+
+
+
+
+
+// callback situation
+function amitpassjao(address , cb){
+  setTimeout(() => {
+    cb({lat: 23.44, lng: 76.5});
+  }, 3000);
+}
+amitpassjao("ashok nagar bengaal", function(det){
+  console.log(det);
+})
