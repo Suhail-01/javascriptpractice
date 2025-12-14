@@ -400,18 +400,34 @@
 // Takes two parameters
 // username
 // callback
+// 👇
 
-
-function getuserlocation(username,cb) {
-  console.log("locating user....");
-  setTimeout(() => {
-    cb({  user: username,
-  lat: 12.9716,
-  lng: 77.5946})
-  }, 3000);
+// function getuserlocation(username,cb) {
+//   console.log("locating user....");
+//   setTimeout(() => {
+//     cb({  user: username,
+//   lat: 12.9716,
+//   lng: 77.5946})
+//   }, 3000);
   
+// }
+// getuserlocation("raju",function(dets){
+//   console.log(dets);
+  
+// })
+
+
+
+
+
+
+
+function afterdelayed(time,cb){
+  setTimeout(() => {
+    cb();
+  }, time);
 }
-getuserlocation("raju",function(dets){
-  console.log(dets);
+afterdelayed(3000,function () {
+  console.log("callback executed...");
   
 })
