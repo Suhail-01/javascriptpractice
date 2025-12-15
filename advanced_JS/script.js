@@ -519,9 +519,9 @@
 
 
 
-  function handleClick() {
-    console.log("Button was clicked!");
-  }
+function showTime() {
+  console.log("Updating every second...");
+}
 
-  document.getElementById("btn").addEventListener("click", handleClick);
-
+// showTime is a callback
+setInterval(showTime, 1000);
