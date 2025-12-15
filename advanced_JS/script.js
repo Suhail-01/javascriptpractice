@@ -465,31 +465,45 @@
 
 
 // callback hell / cristhmass tree problem
-function loginUser(username, cb) {
-  console.log("logged in user...");
-  setTimeout(() => {
-    cb({ id: 1122, username: username });
-  }, 1000);
+// function loginUser(username, cb) {
+//   console.log("logged in user...");
+//   setTimeout(() => {
+//     cb({ id: 1122, username: username });
+//   }, 1000);
+// }
+
+// function fetchPermissions(id, cb) {
+//   console.log("fetching permissions...");
+//   setTimeout(() => {
+//     cb(["read", "write", "delete"]);
+//   }, 2000);
+// }
+
+// function loadDashboard(permissions, cb) {
+//   console.log("loading dashboard...");
+//   setTimeout(() => {
+//     cb();
+//   }, 2000);
+// }
+
+// loginUser("nameaagaya", function (userdata) {
+//   fetchPermissions(userdata.id, function (permissions) {
+//     loadDashboard(permissions, function () {
+//       console.log("✅ dashboard loaded");
+//     });
+//   });
+// });
+
+
+
+
+
+
+function printNumber(num) {
+  console.log(num);
 }
 
-function fetchPermissions(id, cb) {
-  console.log("fetching permissions...");
-  setTimeout(() => {
-    cb(["read", "write", "delete"]);
-  }, 2000);
-}
+const numbers = [1, 2, 3, 4, 5];
 
-function loadDashboard(permissions, cb) {
-  console.log("loading dashboard...");
-  setTimeout(() => {
-    cb();
-  }, 2000);
-}
-
-loginUser("nameaagaya", function (userdata) {
-  fetchPermissions(userdata.id, function (permissions) {
-    loadDashboard(permissions, function () {
-      console.log("✅ dashboard loaded");
-    });
-  });
-});
+// printNumber is passed as a callback
+numbers.forEach(printNumber);
