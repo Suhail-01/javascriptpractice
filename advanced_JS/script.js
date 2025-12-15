@@ -519,13 +519,13 @@
 
 
 
-function double(number) {
-  return number * 2;
+function isAdult(age) {
+  return age >= 18;
 }
 
-const numbers = [1, 2, 3, 4];
+const ages = [12, 18, 25, 16, 30];
 
-// double is a callback function
-const doubledNumbers = numbers.map(double);
+// isAdult is a callback function
+const adults = ages.filter(isAdult);
 
-console.log(doubledNumbers); // [2, 4, 6, 8]
+console.log(adults); // [18, 25, 30]
