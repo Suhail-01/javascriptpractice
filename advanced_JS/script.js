@@ -510,9 +510,22 @@
 
 
 
-function greet() {
-  console.log("Hello after 2 seconds!");
+// function greet() {
+//   console.log("Hello after 2 seconds!");
+// }
+
+// // greet is a callback function
+// setTimeout(greet, 2000);
+
+
+
+function double(number) {
+  return number * 2;
 }
 
-// greet is a callback function
-setTimeout(greet, 2000);
+const numbers = [1, 2, 3, 4];
+
+// double is a callback function
+const doubledNumbers = numbers.map(double);
+
+console.log(doubledNumbers); // [2, 4, 6, 8]
