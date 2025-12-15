@@ -519,9 +519,20 @@
 
 
 
-function showTime() {
-  console.log("Updating every second...");
+function fetchData(callback) {
+  const success = true;
+
+  if (success) {
+    callback(null, "Data fetched successfully");
+  } else {
+    callback("Error fetching data", null);
+  }
 }
 
-// showTime is a callback
-setInterval(showTime, 1000);
+fetchData(function (error, data) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(data);
+  }
+});
