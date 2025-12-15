@@ -519,13 +519,17 @@
 
 
 
-function isAdult(age) {
-  return age >= 18;
+function calculate(a, b, operation) {
+  return operation(a, b);
 }
 
-const ages = [12, 18, 25, 16, 30];
+function add(x, y) {
+  return x + y;
+}
 
-// isAdult is a callback function
-const adults = ages.filter(isAdult);
+function multiply(x, y) {
+  return x * y;
+}
 
-console.log(adults); // [18, 25, 30]
+console.log(calculate(5, 3, add));      // 8
+console.log(calculate(5, 3, multiply)); // 15
