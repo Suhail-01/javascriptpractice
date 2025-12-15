@@ -519,17 +519,9 @@
 
 
 
-function calculate(a, b, operation) {
-  return operation(a, b);
-}
+  function handleClick() {
+    console.log("Button was clicked!");
+  }
 
-function add(x, y) {
-  return x + y;
-}
+  document.getElementById("btn").addEventListener("click", handleClick);
 
-function multiply(x, y) {
-  return x * y;
-}
-
-console.log(calculate(5, 3, add));      // 8
-console.log(calculate(5, 3, multiply)); // 15
