@@ -499,11 +499,20 @@
 
 
 
-function printNumber(num) {
-  console.log(num);
+// function printNumber(num) {
+//   console.log(num);
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// // printNumber is passed as a callback
+// numbers.forEach(printNumber);
+
+
+
+function greet() {
+  console.log("Hello after 2 seconds!");
 }
 
-const numbers = [1, 2, 3, 4, 5];
-
-// printNumber is passed as a callback
-numbers.forEach(printNumber);
+// greet is a callback function
+setTimeout(greet, 2000);
