@@ -538,6 +538,10 @@
 // });
 
 
-document.getElementById("btn").addEventListener("click", function() {
-  alert("Button clicked!");
+const numbers = [1, 2, 3];
+
+const squared = numbers.map(function(num) {
+  return num * num;
 });
+
+console.log(squared);
