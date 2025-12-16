@@ -538,11 +538,10 @@
 // });
 
 
-navigator.geolocation.getCurrentPosition(
-  function(position) {
-    console.log(position.coords.latitude, position.coords.longitude);
-  },
-  function(error) {
-    console.error(error.message);
-  }
-);
+const numbers = [3, 7, 10];
+
+const hasEven = numbers.some(function(num) {
+  return num % 2 === 0;
+});
+
+console.log(hasEven);
