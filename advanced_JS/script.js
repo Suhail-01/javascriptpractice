@@ -538,10 +538,10 @@
 // });
 
 
-const numbers = [1, 2, 3, 4];
-
-const sum = numbers.reduce(function(total, current) {
-  return total + current;
-}, 0);
-
-console.log(sum);
+fetch("https://api.example.com/data")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
+  });
