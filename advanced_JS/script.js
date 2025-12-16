@@ -519,20 +519,32 @@
 
 
 
-function fetchData(callback) {
-  const success = true;
+// function fetchData(callback) {
+//   const success = true;
 
-  if (success) {
-    callback(null, "Data fetched successfully");
-  } else {
-    callback("Error fetching data", null);
-  }
+//   if (success) {
+//     callback(null, "Data fetched successfully");
+//   } else {
+//     callback("Error fetching data", null);
+//   }
+// }
+
+// fetchData(function (error, data) {
+//   if (error) {
+//     console.error(error);
+//   } else {
+//     console.log(data);
+//   }
+// });
+
+
+
+function greet(name, callback) {
+  setTimeout(() => {
+    callback(`Hello, ${name}!`);
+  }, 1000);
 }
 
-fetchData(function (error, data) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log(data);
-  }
+greet("Alice", function(message) {
+  console.log(message);
 });
