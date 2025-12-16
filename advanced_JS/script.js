@@ -538,10 +538,11 @@
 // });
 
 
-fetch("https://api.example.com/data")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    console.log(data);
-  });
+navigator.geolocation.getCurrentPosition(
+  function(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+  },
+  function(error) {
+    console.error(error.message);
+  }
+);
