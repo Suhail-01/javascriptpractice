@@ -538,10 +538,10 @@
 // });
 
 
-const numbers = [10, 25, 30, 45];
+const numbers = [1, 2, 3, 4];
 
-const result = numbers.filter(function(num) {
-  return num > 20;
-});
+const sum = numbers.reduce(function(total, current) {
+  return total + current;
+}, 0);
 
-console.log(result);
+console.log(sum);
