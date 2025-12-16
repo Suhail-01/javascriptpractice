@@ -538,10 +538,10 @@
 // });
 
 
-const numbers = [1, 2, 3];
+const numbers = [10, 25, 30, 45];
 
-const squared = numbers.map(function(num) {
-  return num * num;
+const result = numbers.filter(function(num) {
+  return num > 20;
 });
 
-console.log(squared);
+console.log(result);
