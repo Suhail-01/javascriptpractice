@@ -538,10 +538,13 @@
 // });
 
 
-const numbers = [3, 7, 10];
+let count = 0;
 
-const hasEven = numbers.some(function(num) {
-  return num % 2 === 0;
-});
+const timer = setInterval(function() {
+  count++;
+  console.log(count);
 
-console.log(hasEven);
+  if (count === 5) {
+    clearInterval(timer);
+  }
+}, 1000);
