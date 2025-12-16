@@ -539,12 +539,8 @@
 
 
 
-function greet(name, callback) {
-  setTimeout(() => {
-    callback(`Hello, ${name}!`);
-  }, 1000);
-}
+const numbers = [1, 2, 3, 4];
 
-greet("Alice", function(message) {
-  console.log(message);
+numbers.forEach(function(number) {
+  console.log(number * 2);
 });
