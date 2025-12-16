@@ -538,9 +538,6 @@
 // });
 
 
-
-const numbers = [1, 2, 3, 4];
-
-numbers.forEach(function(number) {
-  console.log(number * 2);
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
 });
