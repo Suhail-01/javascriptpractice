@@ -538,12 +538,11 @@
 // });
 
 
-function checkNumber(num, callback) {
-  if (num > 5) {
-    callback();
-  }
+function logFirst(callback) {
+  console.log("First");
+  callback();
 }
 
-checkNumber(6, function () {
-  console.log("Number is greater than 5");
+logFirst(function () {
+  console.log("Second");
 });
