@@ -538,11 +538,6 @@
 // });
 
 
-function add(a, b, callback) {
-  let result = a + b;
-  callback(result);
-}
-
-add(2, 3, function (sum) {
-  console.log(sum);
-});
+setTimeout(function () {
+  console.log("Done!");
+}, 1000);
