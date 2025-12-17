@@ -538,6 +538,11 @@
 // });
 
 
-setTimeout(function () {
-  console.log("Done!");
-}, 1000);
+function process(callback) {
+  console.log("Processing...");
+  callback();
+}
+
+process(function () {
+  console.log("Finished!");
+});
