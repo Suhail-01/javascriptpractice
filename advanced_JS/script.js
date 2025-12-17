@@ -538,10 +538,11 @@
 // });
 
 
-function showMessage(name, callback) {
-  callback(name);
+function add(a, b, callback) {
+  let result = a + b;
+  callback(result);
 }
 
-showMessage("Alice", function (user) {
-  console.log("Hi " + user);
+add(2, 3, function (sum) {
+  console.log(sum);
 });
