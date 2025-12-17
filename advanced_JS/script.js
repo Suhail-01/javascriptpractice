@@ -538,11 +538,10 @@
 // });
 
 
-function logFirst(callback) {
-  console.log("First");
-  callback();
+function delayed(callback) {
+  setTimeout(callback, 500);
 }
 
-logFirst(function () {
-  console.log("Second");
+delayed(function () {
+  console.log("Hello after delay");
 });
