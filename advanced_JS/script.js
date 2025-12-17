@@ -538,11 +538,8 @@
 // });
 
 
-function process(callback) {
-  console.log("Processing...");
-  callback();
-}
+let numbers = [1, 2, 3];
 
-process(function () {
-  console.log("Finished!");
+numbers.forEach(function (num) {
+  console.log(num);
 });
