@@ -538,13 +538,10 @@
 // });
 
 
-let count = 0;
+function greet(callback) {
+  callback();
+}
 
-const timer = setInterval(function() {
-  count++;
-  console.log(count);
-
-  if (count === 5) {
-    clearInterval(timer);
-  }
-}, 1000);
+greet(function () {
+  console.log("Hello!");
+});
