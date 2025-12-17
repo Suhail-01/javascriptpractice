@@ -538,8 +538,12 @@
 // });
 
 
-let numbers = [1, 2, 3];
+function multiply(num, callback) {
+  return callback(num);
+}
 
-numbers.forEach(function (num) {
-  console.log(num);
+let result = multiply(4, function (n) {
+  return n * 2;
 });
+
+console.log(result);
