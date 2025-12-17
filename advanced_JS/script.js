@@ -537,11 +537,12 @@
 //   }
 // });
 
-
-function delayed(callback) {
-  setTimeout(callback, 500);
+function display(callback) {
+  callback("JavaScript");
 }
 
-delayed(function () {
-  console.log("Hello after delay");
-});
+function show(text) {
+  console.log(text);
+}
+
+display(show);
