@@ -538,12 +538,12 @@
 // });
 
 
-function multiply(num, callback) {
-  return callback(num);
+function checkNumber(num, callback) {
+  if (num > 5) {
+    callback();
+  }
 }
 
-let result = multiply(4, function (n) {
-  return n * 2;
+checkNumber(6, function () {
+  console.log("Number is greater than 5");
 });
-
-console.log(result);
