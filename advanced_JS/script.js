@@ -538,10 +538,10 @@
 // });
 
 
-function greet(callback) {
-  callback();
+function showMessage(name, callback) {
+  callback(name);
 }
 
-greet(function () {
-  console.log("Hello!");
+showMessage("Alice", function (user) {
+  console.log("Hi " + user);
 });
