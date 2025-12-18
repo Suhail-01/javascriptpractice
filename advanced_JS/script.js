@@ -552,10 +552,10 @@
 //   console.log("Promise rejected");
 // }); 
 
-Promise.resolve("OK")
-  .finally(() => {
-    return "IGNORED";
-  })
-  .then(value => {
-    console.log(value);
-  });
+const thenable = {
+  then(resolve, reject) {
+    resolve("Resolved from thenable");
+  }
+};
+
+Promise.resolve(thenable).then(console.log);
