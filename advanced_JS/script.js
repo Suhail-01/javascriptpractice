@@ -552,10 +552,13 @@
 //   console.log("Promise rejected");
 // }); 
 
-console.log("A");
-
-Promise.resolve().then(() => {
-  console.log("B");
-});
-
-console.log("C");
+Promise.resolve()
+  .then(() => {
+    throw new Error("Failure");
+  })
+  .then(() => {
+    console.log("Success");
+  })
+  .catch(err => {
+    console.log(err.message);
+  });
