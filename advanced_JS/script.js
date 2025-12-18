@@ -542,6 +542,12 @@
 
 const prn = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("promise resolved");
+    resolve();
   }, 3000);
 });
+prn.then(function () {
+  console.log("Promise resolved");
+});
+prn.catch(function () {
+  console.log("Promise rejected");
+}); 
