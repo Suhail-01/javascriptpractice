@@ -552,13 +552,10 @@
 //   console.log("Promise rejected");
 // }); 
 
-Promise.resolve()
-  .then(() => {
-    throw new Error("Failure");
-  })
-  .then(() => {
-    console.log("Success");
-  })
-  .catch(err => {
-    console.log(err.message);
-  });
+const p1 = Promise.resolve(1);
+const p2 = Promise.reject("Error");
+const p3 = Promise.resolve(3);
+
+Promise.all([p1, p2, p3])
+  .then(console.log)
+  .catch(console.log);
