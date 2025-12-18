@@ -552,11 +552,10 @@
 //   console.log("Promise rejected");
 // }); 
 
-let prn = new Promise((resolve,reject)=>{
-  setTimeout(() => {
-    reject("roro")
-  }, 2000);
-})
-prn.then(function () {
-  
-})
+console.log("A");
+
+Promise.resolve().then(() => {
+  console.log("B");
+});
+
+console.log("C");
