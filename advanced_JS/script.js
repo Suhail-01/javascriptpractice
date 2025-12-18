@@ -552,10 +552,10 @@
 //   console.log("Promise rejected");
 // }); 
 
-function test() {
-  return Promise.resolve(10).then(value => {
-    Promise.resolve(value * 2);
+Promise.resolve("OK")
+  .finally(() => {
+    return "IGNORED";
+  })
+  .then(value => {
+    console.log(value);
   });
-}
-
-test().then(console.log);
