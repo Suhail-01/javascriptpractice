@@ -537,12 +537,11 @@
 //   }
 // });
 
-function display(callback) {
-  callback("JavaScript");
-}
 
-function show(text) {
-  console.log(text);
-}
 
-display(show);
+
+const prn = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("promise resolved");
+  }, 3000);
+});
