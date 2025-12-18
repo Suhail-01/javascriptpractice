@@ -552,10 +552,8 @@
 //   console.log("Promise rejected");
 // }); 
 
-const thenable = {
-  then(resolve, reject) {
-    resolve("Resolved from thenable");
-  }
-};
+async function foo() {
+  return Promise.resolve(42);
+}
 
-Promise.resolve(thenable).then(console.log);
+foo().then(console.log);
