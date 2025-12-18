@@ -540,14 +540,23 @@
 
 
 
-const prn = new Promise((resolve, reject) => {
+// const prn = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve();
+//   }, 3000);
+// });
+// prn.then(function () {
+//   console.log("Promise resolved");
+// });
+// prn.catch(function () {
+//   console.log("Promise rejected");
+// }); 
+
+let prn = new Promise((resolve,reject)=>{
   setTimeout(() => {
-    resolve();
-  }, 3000);
-});
+    reject("roro")
+  }, 2000);
+})
 prn.then(function () {
-  console.log("Promise resolved");
-});
-prn.catch(function () {
-  console.log("Promise rejected");
-}); 
+  
+})
