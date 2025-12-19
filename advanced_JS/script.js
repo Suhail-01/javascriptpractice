@@ -552,8 +552,10 @@
 //   console.log("Promise rejected");
 // }); 
 
-async function foo() {
-  return Promise.resolve(42);
-}
-
-foo().then(console.log);
+fetch('https://randomuser.me/api/')
+.then(function (nrd) {
+  return nrd.json();
+})
+.then(function (aslidata) {
+  console.log(aslidata);
+})
