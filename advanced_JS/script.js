@@ -562,10 +562,17 @@
 
 
 // APi example
-fetch('https://randomuser.me/api/')
-.then(function (nrd) {
-  return nrd.json();
-})
-.then(function (aslidata) {
-  console.log(aslidata.results[0].name.first);
-})
+// fetch('https://randomuser.me/api/')
+// .then(function (nrd) {
+//   return nrd.json();
+// })
+// .then(function (aslidata) {
+//   console.log(aslidata.results[0].name.first);
+// }) 
+
+
+async function abcd (params) {
+  let prn = await fetch('https://randomuser.me/api/');
+  let data = await prn.json();
+  console.log(data.results[0].name.first);
+}
