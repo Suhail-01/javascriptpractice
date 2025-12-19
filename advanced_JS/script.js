@@ -571,9 +571,10 @@
 // }) 
 
 
-async function fetchDogImage() {
-    const res = await fetch('https://dog.ceo/api/breeds/image/random');
-    const data = await res.json();
-    console.log(data.message);
+async function getRandomQuote() {
+    const response = await fetch('https://api.quotable.io/random');
+    const result = await response.json();
+    console.log(result.content);
 }
+
 
