@@ -552,6 +552,16 @@
 //   console.log("Promise rejected");
 // }); 
 
+
+
+
+
+
+
+
+
+
+// APi example
 fetch('https://randomuser.me/api/')
 .then(function (nrd) {
   return nrd.json();
