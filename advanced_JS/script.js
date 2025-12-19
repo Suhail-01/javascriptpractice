@@ -571,8 +571,8 @@
 // }) 
 
 
-async function getCountryInfo(countryName) {
-    const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+async function getBitcoinPrice() {
+    const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice/BTC.json');
     const data = await response.json();
-    console.log(data[0].capital[0]);
+    console.log(data.bpi.USD.rate);
 }
