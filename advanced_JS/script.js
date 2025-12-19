@@ -571,10 +571,8 @@
 // }) 
 
 
-async function getWeather(city) {
-    const res = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true`
-    );
-    const data = await res.json();
-    console.log(data.current_weather.temperature);
+async function getRandomActivity() {
+    const response = await fetch('https://www.boredapi.com/api/activity');
+    const data = await response.json();
+    console.log(data.activity);
 }
