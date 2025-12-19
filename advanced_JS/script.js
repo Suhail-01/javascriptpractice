@@ -571,8 +571,8 @@
 // }) 
 
 
-async function abcd (params) {
-  let prn = await fetch('https://randomuser.me/api/');
-  let data = await prn.json();
-  console.log(data.results[0].name.first);
+async function getRandomJoke() {
+    const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+    const data = await response.json();
+    console.log(`${data.setup} - ${data.punchline}`);
 }
