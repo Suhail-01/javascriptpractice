@@ -571,8 +571,8 @@
 // }) 
 
 
-async function getRandomActivity() {
-    const response = await fetch('https://www.boredapi.com/api/activity');
+async function getCountryInfo(countryName) {
+    const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
     const data = await response.json();
-    console.log(data.activity);
+    console.log(data[0].capital[0]);
 }
