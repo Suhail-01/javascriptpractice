@@ -571,10 +571,8 @@
 // }) 
 
 
-async function getRandomQuote() {
-    const response = await fetch('https://api.quotable.io/random');
-    const result = await response.json();
-    console.log(result.content);
+async function getGitHubUser(username) {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    const user = await response.json();
+    console.log(user.name);
 }
-
-
