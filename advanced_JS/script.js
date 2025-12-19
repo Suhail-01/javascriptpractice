@@ -557,5 +557,5 @@ fetch('https://randomuser.me/api/')
   return nrd.json();
 })
 .then(function (aslidata) {
-  console.log(aslidata);
+  console.log(aslidata.results[0].name.first);
 })
