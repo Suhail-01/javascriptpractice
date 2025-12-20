@@ -589,13 +589,12 @@
 
 
 // TRy CAtch Example
-new Promise((resolve) => {
-    resolve(10);
-})
-.then((num) => {
-    num * 2;
-})
-.then((result) => {
-    console.log(result);
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise");
 });
 
+console.log("End");
