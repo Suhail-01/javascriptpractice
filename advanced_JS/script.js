@@ -589,12 +589,15 @@
 
 
 // TRy CAtch Example
-setTimeout(() => {
-    console.log("Timeout");
-}, 0);
-
-Promise.resolve().then(() => {
-    console.log("Promise");
+new Promise((resolve, reject) => {
+    reject("Something went wrong");
+})
+.then(() => {
+    console.log("Success");
+})
+.catch((err) => {
+    console.log("Error:", err);
+})
+.then(() => {
+    console.log("After catch");
 });
-
-console.log("End");
