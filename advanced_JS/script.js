@@ -589,11 +589,17 @@
 
 
 // TRy CAtch Example
-try {
-    let a = 33;
-    console.log(a.name.age);
-} catch (error) {
-    log("error hai bhai");
-} finally{
-    console.log("yeh hamesha chalega");
+function getWeather(city) {
+    let apikey = "d5aeb6cb592e85ac12812d4a6c452c84";
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
+        .then((raw) => raw.json())
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
 }
+
+getWeather("solapur");
