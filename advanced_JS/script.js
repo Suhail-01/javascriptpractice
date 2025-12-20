@@ -571,8 +571,11 @@
 // }) 
 
 
-async function getBitcoinPrice() {
-    const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice/BTC.json');
-    const data = await response.json();
-    console.log(data.bpi.USD.rate);
+
+
+async function abcd() {
+    let raw = await fetch('https://randomuser.me/api/');
+    let data = await raw.json();
+    console.log(data);
 }
+abcd();
