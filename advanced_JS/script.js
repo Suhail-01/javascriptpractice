@@ -589,11 +589,15 @@
 
 
 // TRy CAtch Example
-const promise = new Promise((resolve, reject) => {
-    resolve("Success");
-    reject("Error");
+new Promise((resolve) => {
+    resolve(5);
+})
+.then((num) => {
+    return num * 2;
+})
+.then((num) => {
+    return num * 3;
+})
+.then((result) => {
+    console.log(result);
 });
-
-promise
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
