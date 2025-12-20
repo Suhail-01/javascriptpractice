@@ -589,31 +589,11 @@
 
 
 // TRy CAtch Example
-function step1(cb) {
-    setTimeout(() => {
-        console.log("Step 1");
-        cb();
-    }, 1000);
-}
-
-function step2(cb) {
-    setTimeout(() => {
-        console.log("Step 2");
-        cb();
-    }, 1000);
-}
-
-function step3(cb) {
-    setTimeout(() => {
-        console.log("Step 3");
-        cb();
-    }, 1000);
-}
-
-step1(() => {
-    step2(() => {
-        step3(() => {
-            console.log("Done");
-        });
-    });
+const promise = new Promise((resolve, reject) => {
+    resolve("Success");
+    reject("Error");
 });
+
+promise
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
