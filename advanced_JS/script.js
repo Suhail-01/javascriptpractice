@@ -589,12 +589,10 @@
 
 
 // TRy CAtch Example
-function task(cb) {
-    console.log("A");
-    cb();
-    console.log("B");
-}
+console.log("Start");
 
-task(() => {
-    console.log("C");
-});
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+console.log("End");
