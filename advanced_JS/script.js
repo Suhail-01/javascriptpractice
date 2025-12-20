@@ -589,10 +589,31 @@
 
 
 // TRy CAtch Example
-console.log("Start");
+function step1(cb) {
+    setTimeout(() => {
+        console.log("Step 1");
+        cb();
+    }, 1000);
+}
 
-setTimeout(() => {
-    console.log("Timeout");
-}, 0);
+function step2(cb) {
+    setTimeout(() => {
+        console.log("Step 2");
+        cb();
+    }, 1000);
+}
 
-console.log("End");
+function step3(cb) {
+    setTimeout(() => {
+        console.log("Step 3");
+        cb();
+    }, 1000);
+}
+
+step1(() => {
+    step2(() => {
+        step3(() => {
+            console.log("Done");
+        });
+    });
+});
