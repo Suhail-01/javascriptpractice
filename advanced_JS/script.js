@@ -573,9 +573,27 @@
 
 
 
-async function abcd() {
-    let raw = await fetch('https://randomuser.me/api/');
-    let data = await raw.json();
-    console.log(data);
+
+
+
+
+// Asynch Awit example
+// async function abcd() {
+//     let raw = await fetch('https://randomuser.me/api/');
+//     let data = await raw.json();
+//     console.log(data);
+// }
+// abcd();
+
+
+
+
+// TRy CAtch Example
+try {
+    let a = 33;
+    console.log(a.name.age);
+} catch (error) {
+    log("error hai bhai");
+} finally{
+    console.log("yeh hamesha chalega");
 }
-abcd();
