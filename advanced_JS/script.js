@@ -589,15 +589,13 @@
 
 
 // TRy CAtch Example
-new Promise((resolve, reject) => {
-    reject("Something went wrong");
-})
-.then(() => {
-    console.log("Success");
-})
-.catch((err) => {
-    console.log("Error:", err);
-})
-.then(() => {
-    console.log("After catch");
-});
+function getweather(city) {
+    let apikey = `d5aeb6cb592e85ac12812d4a6c452c84`;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
+        .then(raw => raw.json())
+        .then(result => {
+            console.log(result);
+        });
+}
+
+getweather("London");
