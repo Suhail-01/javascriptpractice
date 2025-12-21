@@ -617,20 +617,37 @@
 // getwaether('solapur')
 
 
-async function getweather(city) {
-    try {
-        let apikey = `d5aeb6cb592e85ac12812d4a6c452c84`;
-        let raw = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
-        );
+// async function getweather(city) {
+//     try {
+//         let apikey = `d5aeb6cb592e85ac12812d4a6c452c84`;
+//         let raw = await fetch(
+//             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+//         );
 
-        if (!raw.ok) {
-            throw new Error("city not found try different city");
-        }
+//         if (!raw.ok) {
+//             throw new Error("city not found try different city");
+//         }
 
-        let data = await raw.json();
-    } catch (error) {
-        console.error(error.message);
-    }
-}
-getweather("dehli")
+//         let data = await raw.json();
+//     } catch (error) {
+//         console.error(error.message);
+//     }
+// }
+// getweather("dehli")
+
+
+
+
+
+// Debouncing & Throttling:-
+// function debouncing(fn,delay) {
+//    let timer;
+//    return function () {
+//     clearTimeout(timer);
+//     timer = setTimeout((fn ,delay) => {
+//     }, delay);
+//    } 
+// }
+// document.querySelector("#search").addEventListener("input",debouncing(function () {
+//     console.log("fetching data...");
+// }),300)
