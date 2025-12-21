@@ -655,16 +655,24 @@
 
 
 
-function guess(no) {
-    new Promise((resolve , reject) =>{
-        setTimeout(() => {
-            let randomnum = Math.floor(Math.random() * 100);
-            if(randomnum === no){
-                resolve("you guessed it right");
-            }else{
-                reject("wrong guess try again");
-            }
-        }, no);
-    })
-}
-guess
+// function guess(no) {
+//     new Promise((resolve , reject) =>{
+//         setTimeout(() => {
+//             let randomnum = Math.floor(Math.random() * 100);
+//             if(randomnum === no){
+//                 resolve("you guessed it right");
+//             }else{
+//                 reject("wrong guess try again");
+//             }
+//         }, no);
+//     })
+// }
+// guess
+
+
+new Promise((resolve) => {
+    resolve(5);
+})
+.then(num => num * 2)
+.then(result => result + 10)
+.then(final => console.log(final));
