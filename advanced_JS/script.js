@@ -670,9 +670,13 @@
 // guess
 
 
-new Promise((resolve) => {
-    resolve(5);
-})
-.then(num => num * 2)
-.then(result => result + 10)
-.then(final => console.log(final));
+const p1 = new Promise(resolve => {
+    setTimeout(() => resolve("First"), 1000);
+});
+
+const p2 = new Promise(resolve => {
+    setTimeout(() => resolve("Second"), 1500);
+});
+
+Promise.all([p1, p2])
+    .then(results => console.log(results));
