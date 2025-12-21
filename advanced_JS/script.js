@@ -670,13 +670,12 @@
 // guess
 
 
-const p1 = new Promise(resolve => {
-    setTimeout(() => resolve("First"), 1000);
-});
+function timeoutPromise() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve("Finished");
+        }, 1000);
+    });
+}
 
-const p2 = new Promise(resolve => {
-    setTimeout(() => resolve("Second"), 1500);
-});
-
-Promise.all([p1, p2])
-    .then(results => console.log(results));
+timeoutPromise().then(msg => console.log(msg));
