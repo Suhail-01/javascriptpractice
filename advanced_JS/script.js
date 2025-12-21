@@ -651,3 +651,15 @@
 // document.querySelector("#search").addEventListener("input",debouncing(function () {
 //     console.log("fetching data...");
 // }),300)
+
+
+
+function delay(ms) {
+    new Promise((resolve) =>{
+        setTimeout(() => {
+            resolve("done");
+        }, ms);
+    });
+}
+delay(1000).then(result => console.log(result));
+)
