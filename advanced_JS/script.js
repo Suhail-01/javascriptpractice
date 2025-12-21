@@ -602,16 +602,35 @@
 
 
 
-
+ 
 // using async and awit above code 
-async function getwaether(city) {
+// async function getwaether(city) {
+//     try {
+//         let apikey = `d5aeb6cb592e85ac12812d4a6c452c84`;
+//         let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=solapur&appid=${apikey}`)
+//         let result = await raw.json();
+//         console.log(result);
+//     } catch (error) {
+//         console.error(error.message);
+//     }
+// }
+// getwaether('solapur')
+
+
+async function getweather(city) {
     try {
         let apikey = `d5aeb6cb592e85ac12812d4a6c452c84`;
-        let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=solapur&appid=${apikey}`)
-        let result = await raw.json();
-        console.log(result);
+        let raw = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+        );
+
+        if (!raw.ok) {
+            throw new Error("city not found try different city");
+        }
+
+        let data = await raw.json();
     } catch (error) {
         console.error(error.message);
     }
 }
-getwaether('solapur')
+getweather("dehli")
