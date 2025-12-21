@@ -654,12 +654,17 @@
 
 
 
-function delay(ms) {
-    new Promise((resolve) =>{
+
+function guess(no) {
+    new Promise((resolve , reject) =>{
         setTimeout(() => {
-            resolve("done");
-        }, ms);
-    });
+            let randomnum = Math.floor(Math.random() * 100);
+            if(randomnum === no){
+                resolve("you guessed it right");
+            }else{
+                reject("wrong guess try again");
+            }
+        }, no);
+    })
 }
-delay(1000).then(result => console.log(result));
-)
+guess
