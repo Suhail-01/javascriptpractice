@@ -670,12 +670,9 @@
 // guess
 
 
-function asyncTask() {
-  return new Promise(resolve => {
-    setTimeout(() => resolve("Task finished"), 500);
-  });
-}
-
 Promise.resolve()
-  .then(() => asyncTask())
-  .then(result => console.log(result));
+  .then(() => {
+    throw new Error("Something went wrong");
+  })
+  .then(() => console.log("This will not run"))
+  .catch(error => console.error(error.message));
