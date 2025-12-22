@@ -670,12 +670,14 @@
 // guess
 
 
-function timeoutPromise() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve("Finished");
-        }, 1000);
-    });
-}
+const myPromise = new Promise((resolve, reject) => {
+  const success = true;
 
-timeoutPromise().then(msg => console.log(msg));
+  if (success) {
+    resolve("Operation successful");
+  } else {
+    reject("Operation failed");
+  }
+});
+
+myPromise.then(result => console.log(result));
