@@ -670,9 +670,8 @@
 // guess
 
 
-Promise.resolve()
-  .then(() => {
-    throw new Error("Something went wrong");
-  })
-  .then(() => console.log("This will not run"))
-  .catch(error => console.error(error.message));
+const p1 = Promise.resolve("Success");
+const p2 = Promise.reject("Failure");
+
+Promise.allSettled([p1, p2])
+  .then(results => console.log(results));
