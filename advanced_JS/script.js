@@ -670,14 +670,7 @@
 // guess
 
 
-const myPromise = new Promise((resolve, reject) => {
-  const success = true;
-
-  if (success) {
-    resolve("Operation successful");
-  } else {
-    reject("Operation failed");
-  }
-});
-
-myPromise.then(result => console.log(result));
+fetch("https://api.example.com/data")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
