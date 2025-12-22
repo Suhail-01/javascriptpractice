@@ -670,9 +670,8 @@
 // guess
 
 
-const p1 = Promise.resolve(1);
-const p2 = Promise.resolve(2);
-const p3 = Promise.resolve(3);
+const p1 = new Promise(resolve => setTimeout(resolve, 500, "First"));
+const p2 = new Promise(resolve => setTimeout(resolve, 100, "Second"));
 
-Promise.all([p1, p2, p3])
-  .then(values => console.log(values)); // [1, 2, 3]
+Promise.race([p1, p2])
+  .then(result => console.log(result)); // "Second"
