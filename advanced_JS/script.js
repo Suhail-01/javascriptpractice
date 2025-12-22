@@ -670,5 +670,5 @@
 // guess
 
 
-Promise.resolve("Hello")
-  .then(value => console.log(value));
+Promise.reject("Error occurred")
+  .catch(error => console.error(error));
