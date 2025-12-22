@@ -670,7 +670,12 @@
 // guess
 
 
-Promise.resolve(5)
-  .then(value => value * 2)
-  .then(value => value + 10)
-  .then(result => console.log(result)); // 20
+function asyncTask() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve("Task finished"), 500);
+  });
+}
+
+Promise.resolve()
+  .then(() => asyncTask())
+  .then(result => console.log(result));
