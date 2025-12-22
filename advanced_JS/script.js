@@ -670,7 +670,10 @@
 // guess
 
 
-fetch("https://api.example.com/data")
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+const promise = new Promise((resolve) => {
+  setTimeout(() => resolve("Done"), 1000);
+});
+
+promise
+  .then(result => console.log(result))
+  .finally(() => console.log("Promise completed"));
