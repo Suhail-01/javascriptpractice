@@ -670,5 +670,7 @@
 // guess
 
 
-Promise.reject("Error occurred")
-  .catch(error => console.error(error));
+Promise.resolve(5)
+  .then(value => value * 2)
+  .then(value => value + 10)
+  .then(result => console.log(result)); // 20
