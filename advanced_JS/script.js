@@ -670,19 +670,19 @@
 // guess
 
 
-function unstableTask() {
-  return new Promise((resolve, reject) => {
-    Math.random() > 0.7 ? resolve("Success!") : reject("Failed");
-  });
+function task(time) {
+  return () =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        console.log(`Done in ${time}ms`);
+        resolve();
+      }, time)
+    );
 }
 
-function retryPromise(fn, retries) {
-  return fn().catch(err => {
-    if (retries === 0) throw err;
-    return retryPromise(fn, retries - 1);
-  });
-}
+const tasks = [task(1000), task(500), task(800)];
 
-retryPromise(unstableTask, 3)
-  .then(console.log)
-  .catch(console.error);
+tasks.reduce(
+  (prev, curr) => prev.then(curr),
+  Promise.resolve()
+);
