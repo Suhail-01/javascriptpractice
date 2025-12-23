@@ -670,9 +670,16 @@
 // guess
 
 
-const p1 = Promise.resolve(1);
-const p2 = Promise.resolve(2);
-const p3 = Promise.resolve(3);
+function callbackFn(cb) {
+  setTimeout(() => cb(null, "Data received"), 1000);
+}
 
-Promise.all([p1, p2, p3])
-  .then(results => console.log(results));
+function promiseFn() {
+  return new Promise((resolve, reject) => {
+    callbackFn((err, data) => {
+      err ? reject(err) : resolve(data);
+    });
+  });
+}
+
+promiseFn().then(console.log);
