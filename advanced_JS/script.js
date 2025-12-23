@@ -670,14 +670,7 @@
 // guess
 
 
-function asyncTask(success) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      success ? resolve("Success") : reject("Error");
-    }, 1000);
-  });
-}
-
-asyncTask(true)
-  .then(result => console.log(result))
-  .catch(err => console.error(err));
+Promise.resolve(2)
+  .then(num => num * 3)
+  .then(num => num + 5)
+  .then(result => console.log(result));
