@@ -670,18 +670,19 @@
 // guess
 
 
-function fetchWithTimeout() {
-  const dataPromise = new Promise(resolve =>
-    setTimeout(() => resolve("Data loaded"), 2000)
-  );
-
-  const timeoutPromise = new Promise((_, reject) =>
-    setTimeout(() => reject("Timeout"), 1000)
-  );
-
-  return Promise.race([dataPromise, timeoutPromise]);
+function unstableTask() {
+  return new Promise((resolve, reject) => {
+    Math.random() > 0.7 ? resolve("Success!") : reject("Failed");
+  });
 }
 
-fetchWithTimeout()
+function retryPromise(fn, retries) {
+  return fn().catch(err => {
+    if (retries === 0) throw err;
+    return retryPromise(fn, retries - 1);
+  });
+}
+
+retryPromise(unstableTask, 3)
   .then(console.log)
   .catch(console.error);
