@@ -670,16 +670,18 @@
 // guess
 
 
-function callbackFn(cb) {
-  setTimeout(() => cb(null, "Data received"), 1000);
+function fetchWithTimeout() {
+  const dataPromise = new Promise(resolve =>
+    setTimeout(() => resolve("Data loaded"), 2000)
+  );
+
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject("Timeout"), 1000)
+  );
+
+  return Promise.race([dataPromise, timeoutPromise]);
 }
 
-function promiseFn() {
-  return new Promise((resolve, reject) => {
-    callbackFn((err, data) => {
-      err ? reject(err) : resolve(data);
-    });
-  });
-}
-
-promiseFn().then(console.log);
+fetchWithTimeout()
+  .then(console.log)
+  .catch(console.error);
