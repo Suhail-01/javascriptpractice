@@ -670,7 +670,12 @@
 // guess
 
 
-Promise.resolve(2)
-  .then(num => num * 3)
-  .then(num => num + 5)
-  .then(result => console.log(result));
+function randomPromise() {
+  return new Promise((resolve, reject) => {
+    Math.random() > 0.5 ? resolve("Resolved!") : reject("Rejected!");
+  });
+}
+
+randomPromise()
+  .then(msg => console.log(msg))
+  .catch(err => console.error(err));
