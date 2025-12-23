@@ -670,5 +670,14 @@
 // guess
 
 
-import {rehman} from "./app.js";
-console.log(rehman); 
+function asyncTask(success) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      success ? resolve("Success") : reject("Error");
+    }, 1000);
+  });
+}
+
+asyncTask(true)
+  .then(result => console.log(result))
+  .catch(err => console.error(err));
