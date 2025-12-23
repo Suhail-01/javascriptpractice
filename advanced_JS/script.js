@@ -670,8 +670,5 @@
 // guess
 
 
-const p1 = Promise.reject("Error 1");
-const p2 = Promise.resolve("First success");
-
-Promise.any([p1, p2])
-  .then(result => console.log(result));
+import {rehman} from "./app.js";
+console.log(rehman); 
