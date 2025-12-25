@@ -671,7 +671,7 @@
 
 
 
-var h1 = React.createElement('h1',null,'hello wolrd');
-var con = document.querySelector('#con');
-var root = ReactDOM.createRoot(con);
-root.render(h1);
+const box = ()=>{
+    return React.createElement('div',{id:'box'}, 'this is box')
+}
+export default box;
