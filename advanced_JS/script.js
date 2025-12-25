@@ -670,19 +670,8 @@
 // guess
 
 
-function task(time) {
-  return () =>
-    new Promise(resolve =>
-      setTimeout(() => {
-        console.log(`Done in ${time}ms`);
-        resolve();
-      }, time)
-    );
-}
 
-const tasks = [task(1000), task(500), task(800)];
-
-tasks.reduce(
-  (prev, curr) => prev.then(curr),
-  Promise.resolve()
-);
+var h1 = React.createElement('h1',null,'hello wolrd');
+var con = document.querySelector('#con');
+var root = ReactDOM.createRoot(con);
+root.render(h1);

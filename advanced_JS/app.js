@@ -1,6 +1,2 @@
-export const rehman ={
-    name: "Rehman",
-    age: 24,
-    profession: "Developer"
-}
-export default rehman;
+import {user}  from "./script.js";
+console.log(user);
