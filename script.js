@@ -1730,9 +1730,7 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function isPalindrome(str) {
-  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-  return cleaned === cleaned.split("").reverse().join("");
-}
+const arr = [1, 2, 3, 4];
+const sum = arr.reduce((total, num) => total + num, 0);
 
-console.log(isPalindrome("Madam"));
+console.log(sum);
