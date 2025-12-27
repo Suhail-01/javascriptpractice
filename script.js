@@ -1730,7 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const numbers = [3, 7, 2, 9, 5];
-const max = Math.max(...numbers);
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
 
-console.log(max);
+console.log(reverseString("JavaScript"));
