@@ -1730,8 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const fruits = ["apple", "banana", "mango"];
-
-for (let fruit of fruits) {
-  console.log(fruit);
+function countVowels(str) {
+  return str.match(/[aeiou]/gi)?.length || 0;
 }
+
+console.log(countVowels("JavaScript"));
