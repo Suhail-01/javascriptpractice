@@ -1730,7 +1730,9 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const nums = [1, 2, 2, 3, 4, 4];
-const uniqueNums = [...new Set(nums)];
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
 
-console.log(uniqueNums);
+console.log(factorial(5));
