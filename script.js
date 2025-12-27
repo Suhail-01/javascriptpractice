@@ -1728,3 +1728,10 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
+
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(isEven(10));
