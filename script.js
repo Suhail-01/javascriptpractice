@@ -1729,8 +1729,6 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-const numbers = [10, 3, 25, 7, 1];
+const now = new Date();
 
-numbers.sort((a, b) => a - b);
-
-console.log(numbers);
+console.log(now.toLocaleString());
