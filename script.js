@@ -1730,8 +1730,7 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function isEven(num) {
-  return num % 2 === 0;
-}
+const numbers = [3, 7, 2, 9, 5];
+const max = Math.max(...numbers);
 
-console.log(isEven(10));
+console.log(max);
