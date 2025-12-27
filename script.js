@@ -1730,7 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const arr = [1, 2, 3, 4];
-const sum = arr.reduce((total, num) => total + num, 0);
+const promise = new Promise((resolve, reject) => {
+  resolve("Promise resolved!");
+});
 
-console.log(sum);
+promise.then(result => console.log(result));
