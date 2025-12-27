@@ -1730,8 +1730,7 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function countVowels(str) {
-  return str.match(/[aeiou]/gi)?.length || 0;
-}
+const nums = [1, 2, 2, 3, 4, 4];
+const uniqueNums = [...new Set(nums)];
 
-console.log(countVowels("JavaScript"));
+console.log(uniqueNums);
