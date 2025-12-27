@@ -1730,9 +1730,9 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function factorial(n) {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
+function isPalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return cleaned === cleaned.split("").reverse().join("");
 }
 
-console.log(factorial(5));
+console.log(isPalindrome("Madam"));
