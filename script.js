@@ -1729,9 +1729,8 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
+const numbers = [10, 3, 25, 7, 1];
 
-const promise = new Promise((resolve, reject) => {
-  resolve("Promise resolved!");
-});
+numbers.sort((a, b) => a - b);
 
-promise.then(result => console.log(result));
+console.log(numbers);
