@@ -1730,8 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function reverseString(str) {
-  return str.split("").reverse().join("");
-}
+const fruits = ["apple", "banana", "mango"];
 
-console.log(reverseString("JavaScript"));
+for (let fruit of fruits) {
+  console.log(fruit);
+}
