@@ -1729,6 +1729,6 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-const now = new Date();
-
-console.log(now.toLocaleString());
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
