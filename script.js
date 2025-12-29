@@ -1729,6 +1729,8 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-function sumArray(arr) {
-  return arr.reduce((sum, num) => sum + num, 0);
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
 }
+
