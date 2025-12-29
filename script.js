@@ -1729,6 +1729,8 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-function countVowels(str) {
-  return str.match(/[aeiou]/gi)?.length || 0;
+function longestWord(sentence) {
+  return sentence.split(" ").reduce((longest, word) =>
+    word.length > longest.length ? word : longest
+  , "");
 }
