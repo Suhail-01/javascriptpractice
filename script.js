@@ -1729,10 +1729,6 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-function fibonacci(n) {
-  const seq = [0, 1];
-  for (let i = 2; i < n; i++) {
-    seq.push(seq[i - 1] + seq[i - 2]);
-  }
-  return seq.slice(0, n);
+function countVowels(str) {
+  return str.match(/[aeiou]/gi)?.length || 0;
 }
