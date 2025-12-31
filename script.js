@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function countVowels(str) {
-  return str.match(/[aeiou]/gi)?.length || 0;
+function celsiusToFahrenheit(c) {
+  return (c * 9) / 5 + 32;
 }
