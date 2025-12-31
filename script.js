@@ -1728,7 +1728,10 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function factorial(n) {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
+function fibonacci(n) {
+  const result = [0, 1];
+  for (let i = 2; i < n; i++) {
+    result.push(result[i - 1] + result[i - 2]);
+  }
+  return result.slice(0, n);
 }
