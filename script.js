@@ -1728,9 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function capitalizeWords(str) {
-  return str
-    .split(" ")
-    .map(word => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+function arraysEqual(a, b) {
+  return a.length === b.length && a.every((val, i) => val === b[i]);
 }
