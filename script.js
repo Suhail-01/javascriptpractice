@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function hasProperty(obj, prop) {
-  return obj.hasOwnProperty(prop);
+function getObjectKeys(obj) {
+  return Object.keys(obj);
 }
