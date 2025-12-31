@@ -1729,6 +1729,6 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-function findMax(arr) {
-  return Math.max(...arr);
+function findMin(arr) {
+  return Math.min(...arr);
 }
