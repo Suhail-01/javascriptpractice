@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function flattenArray(arr) {
-  return arr.flat();
+function arrayToString(arr) {
+  return arr.join(",");
 }
