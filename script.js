@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function countOccurrences(arr, value) {
-  return arr.filter(v => v === value).length;
+function removeFalsy(arr) {
+  return arr.filter(Boolean);
 }
