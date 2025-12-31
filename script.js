@@ -1728,8 +1728,10 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function longestWord(str) {
-  return str.split(" ").reduce((longest, word) =>
-    word.length > longest.length ? word : longest
-  );
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 }
