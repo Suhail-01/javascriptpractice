@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function arraysEqual(a, b) {
-  return a.length === b.length && a.every((val, i) => val === b[i]);
+function mergeArrays(a, b) {
+  return [...a, ...b];
 }
