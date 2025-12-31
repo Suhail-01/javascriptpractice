@@ -1728,10 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function fibonacci(n) {
-  const result = [0, 1];
-  for (let i = 2; i < n; i++) {
-    result.push(result[i - 1] + result[i - 2]);
-  }
-  return result.slice(0, n);
+function isEven(num) {
+  return num % 2 === 0;
 }
