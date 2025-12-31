@@ -1728,6 +1728,6 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function randomBoolean() {
-  return Math.random() >= 0.5;
+function toLower(str) {
+  return str.toLowerCase();
 }
