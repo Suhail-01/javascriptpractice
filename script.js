@@ -1730,14 +1730,12 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function outer() {
-  let count = 0;
-  return function inner() {
-    count++;
-    return count;
-  };
-}
+const obj = {
+  value: 42,
+  getValue() {
+    return this.value;
+  }
+};
 
-const counter = outer();
-console.log(counter());
-console.log(counter());
+const getValue = obj.getValue;
+console.log(getValue());
