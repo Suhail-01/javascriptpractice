@@ -1729,11 +1729,8 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-const user = { name: "Sam" };
+const arr1 = [1, 2];
+const arr2 = [3, 4];
 
-function updateUser(u) {
-  u.name = "John";
-}
-
-updateUser(user);
-console.log(user.name);
+const arr3 = [...arr1, ...arr2];
+console.log(arr3);
