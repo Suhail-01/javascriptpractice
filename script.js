@@ -1730,12 +1730,11 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const obj = {
-  value: 42,
-  getValue() {
-    return this.value;
+const person = {
+  name: "Alex",
+  greet: () => {
+    console.log(this.name);
   }
 };
 
-const getValue = obj.getValue;
-console.log(getValue());
+person.greet();
