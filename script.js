@@ -1730,10 +1730,10 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const numbers = [1, 2, 3];
+console.log("Start");
 
-const result1 = numbers.map(n => n * 2);
-const result2 = numbers.forEach(n => n * 2);
+Promise.resolve().then(() => {
+  console.log("Promise");
+});
 
-console.log(result1);
-console.log(result2);
+console.log("End");
