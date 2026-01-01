@@ -1728,6 +1728,15 @@
 // let user2 = new user("myname","h@h.in")
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
-function toLower(str) {
-  return str.toLowerCase();
+
+
+function testScope() {
+  if (true) {
+    var x = 10;
+    let y = 20;
+  }
+  console.log(x);
+  console.log(y);
 }
+
+testScope();
