@@ -1730,13 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-function testScope() {
-  if (true) {
-    var x = 10;
-    let y = 20;
-  }
-  console.log(x);
-  console.log(y);
-}
+console.log(a);
+console.log(b);
 
-testScope();
+var a = 5;
+let b = 10;
