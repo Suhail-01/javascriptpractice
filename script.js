@@ -1730,10 +1730,8 @@
 // let user4 = new user("myname","h@h.in")
 
 
-console.log("Start");
+async function fetchData() {
+  return "Data loaded";
+}
 
-Promise.resolve().then(() => {
-  console.log("Promise");
-});
-
-console.log("End");
+console.log(fetchData());
