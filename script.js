@@ -1730,8 +1730,14 @@
 // let user4 = new user("myname","h@h.in")
 
 
-console.log(a);
-console.log(b);
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
 
-var a = 5;
-let b = 10;
+const counter = outer();
+console.log(counter());
+console.log(counter());
