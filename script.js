@@ -1729,5 +1729,11 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-console.log(0 == false);
-console.log(0 === false);
+const user = { name: "Sam" };
+
+function updateUser(u) {
+  u.name = "John";
+}
+
+updateUser(user);
+console.log(user.name);
