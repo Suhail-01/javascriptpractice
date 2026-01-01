@@ -1730,11 +1730,10 @@
 // let user4 = new user("myname","h@h.in")
 
 
-const person = {
-  name: "Alex",
-  greet: () => {
-    console.log(this.name);
-  }
-};
+const numbers = [1, 2, 3];
 
-person.greet();
+const result1 = numbers.map(n => n * 2);
+const result2 = numbers.forEach(n => n * 2);
+
+console.log(result1);
+console.log(result2);
