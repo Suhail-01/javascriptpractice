@@ -1729,9 +1729,5 @@
 // let user3 = new user("myname","h@h.in")
 // let user4 = new user("myname","h@h.in")
 
-
-async function fetchData() {
-  return "Data loaded";
-}
-
-console.log(fetchData());
+console.log(0 == false);
+console.log(0 === false);
